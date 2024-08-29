@@ -10,15 +10,15 @@
   <link rel="icon" href="{{ '/Papers/icon.png' | prepend: site.baseurl }}" type="image/png">
 
 <!-- Google Analytics 4 -->
-{% if site.google_analytics %}
-<script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  {% if site.google_analytics %}
+  <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-  gtag('config', '{{ site.google_analytics }}');
-</script>
-{% endif %}
+    gtag('config', '{{ site.google_analytics }}');
+  </script>
+  {% endif %}
 
 </head>
