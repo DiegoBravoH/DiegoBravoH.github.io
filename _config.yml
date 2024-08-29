@@ -15,7 +15,6 @@ github_username:  lorem_ipsum
 gplus_username:  lorem_ipsum
 
 # Google-analytics
-google-analytics:
-  id: ""
+google_analytics: "G-N5XY8W00P0"  # Reemplaza con tu ID de medición
 
 exclude: ['package.json', 'src' , 'node_modules']
