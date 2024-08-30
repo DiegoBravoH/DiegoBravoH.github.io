@@ -1559,10 +1559,7 @@ template {
 .fa-university:before {
   content: "\f19c";
 }
-.fa-graduation-cap:before,
-.fa-mortar-board:before {
-  content: "\f19d";
-}
+
 .fa-yahoo:before {
   content: "\f19e";
 }
