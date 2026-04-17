@@ -1,0 +1,56 @@
+======================================
+======= 0) Access to the project =====
+======================================
+cd github/
+cd Jekyll/
+cd DiegoBravoH.github.io/
+======================================
+========= 1) Validate versions =======
+======================================
+input: ruby -v
+output: ruby 3.2.3 (2024-01-18 revision 52bb2ac0a6) [x64-mingw-ucrt]
+
+#input: gem install jekyll bundler
+======================================
+========= 2) Lauch jekyll ============
+======================================
+Option 1:
+		bundle exec jekyll serve
+Option 2:
+		jekyll serve
+http://127.0.0.1:4000
+
+git rm --cached run_gitbash_paths.txt
+
+======================================
+====== 3) Navegar en archivos ========
+======================================
+Dirijase al folder _include y ejecte cambios solo acá.
+Tenga en cuenta el archivo para realizar cambios responsives y de color:
+assets/css/#main.css
+
+======================================
+====== 4) Lazar cambios a gitHub =====E
+======================================
+1. Abre gitbash
+2. cd github/Jekyll/DiegoBravoH.github.io obtengo (dbrav@DiegoBravo MINGW64 ~/github/Jekyll/DiegoBravoH.github.io (main) )
+git status
+git add .
+git commit -am "Update email and education"
+git pull origin main 
+git push origin main 
+
+
+Instalación manual de google analytics para concetar con el head:
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-N5XY8W00P0"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-N5XY8W00P0');
+</script>
+Nota. en mi caso cambie G-N5XY8W00P0 por {{ site.google_analytics }}
+
+
