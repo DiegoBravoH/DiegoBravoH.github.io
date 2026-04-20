@@ -1,0 +1,566 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+  overflow-x: hidden;
+}
+
+.hero {
+  min-height: 65vh;
+  display: flex;
+  align-items: center;
+  margin-bottom: 4rem;
+}
+
+.heroContent {
+  display: flex;
+  gap: 5rem;
+  align-items: center;
+  width: 100%;
+}
+
+.textSection {
+  flex: 1;
+  max-width: 650px;
+  min-width: 0;
+}
+
+.name {
+  color: var(--text-color);
+  font-size: 3rem;
+  font-weight: 700;
+  margin: 0 0 0.75rem 0;
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+}
+
+.title {
+  color: var(--accent-color);
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin: 0 0 2rem 0;
+  letter-spacing: 0.5px;
+}
+
+.description {
+  color: var(--text-color);
+  font-size: 1.05rem;
+  line-height: 1.8;
+  margin-bottom: 2.5rem;
+  opacity: 0.9;
+}
+
+.expertise {
+  margin-bottom: 2.5rem;
+}
+
+.expertiseTitle {
+  color: var(--text-color);
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  opacity: 0.6;
+}
+
+.expertiseGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.expertiseTag {
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text-color);
+  padding: 0.6rem 1.1rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.expertiseTag:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: var(--accent-color);
+  transform: translateY(-2px);
+}
+
+.actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.primaryButton {
+  background: var(--accent-color);
+  color: #1e1e1e;
+  padding: 0.75rem 2rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.15rem;
+}
+
+.buttonLabel {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  opacity: 0.75;
+}
+
+.buttonMain {
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  white-space: nowrap;
+}
+
+.primaryButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+  filter: brightness(1.1);
+}
+
+.secondaryButton {
+  background: transparent;
+  color: var(--text-color);
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding: 0.9rem 2.5rem;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  letter-spacing: 0.3px;
+}
+
+.secondaryButton:hover {
+  border-color: var(--accent-color);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+}
+
+.imageSection {
+  flex-shrink: 0;
+}
+
+.imageWrapper {
+  position: relative;
+  width: 280px;
+  height: 280px;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease;
+}
+
+.imageWrapper:hover {
+  border-color: var(--accent-color);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
+}
+
+.profileImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 20%;
+}
+
+/* Experience Timeline */
+.experience {
+  margin-top: 4rem;
+}
+
+.sectionTitle {
+  color: var(--text-color);
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin: 0 0 2.5rem 0;
+  letter-spacing: -0.5px;
+}
+
+.timeline {
+  position: relative;
+  padding-left: 2rem;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 5px;
+  top: 8px;
+  bottom: 2rem;
+  width: 2px;
+  background: linear-gradient(to bottom,
+    var(--accent-color),
+    rgba(255, 255, 255, 0.15)
+  );
+}
+
+.timelineItem {
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.timelineItem:last-child {
+  margin-bottom: 0;
+}
+
+.timelineItem:last-child .timeline::before {
+  bottom: 0;
+}
+
+.timelineDot {
+  position: absolute;
+  left: calc(-2rem - 2px);
+  top: 8px;
+  width: 12px;
+  height: 12px;
+  background: var(--accent-color);
+  border-radius: 50%;
+  border: 2px solid var(--main-bg);
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.15);
+  z-index: 2;
+}
+
+.timelineContent {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 6px;
+  padding: 1.5rem;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.timelineContent:hover {
+  background: rgba(255, 255, 255, 0.04);
+  border-color: var(--accent-color);
+  transform: translateX(4px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+}
+
+.timelineHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 0.85rem;
+  gap: 1rem;
+}
+
+.jobTitle {
+  color: var(--text-color);
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin: 0 0 0.3rem 0;
+  line-height: 1.3;
+}
+
+.company {
+  color: var(--accent-color);
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+.period {
+  color: var(--text-color);
+  font-size: 0.8rem;
+  opacity: 0.55;
+  font-weight: 500;
+  white-space: nowrap;
+  padding: 0.25rem 0.7rem;
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 3px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.jobDescription {
+  color: var(--text-color);
+  font-size: 0.9rem;
+  line-height: 1.65;
+  margin: 0;
+  opacity: 0.82;
+}
+
+/* Laptop screens - reduce gap */
+@media screen and (max-width: 1280px) {
+  .heroContent {
+    gap: 3rem;
+  }
+
+  .textSection {
+    max-width: 600px;
+  }
+
+  .imageWrapper {
+    width: 260px;
+    height: 260px;
+  }
+}
+
+/* Tablet and smaller */
+@media screen and (max-width: 1024px) {
+  .heroContent {
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .textSection {
+    max-width: 100%;
+    order: 2;
+  }
+
+  .imageSection {
+    order: 1;
+  }
+
+  .name {
+    font-size: 2.5rem;
+  }
+
+  .title {
+    font-size: 1.35rem;
+  }
+
+  .imageWrapper {
+    width: 240px;
+    height: 240px;
+  }
+
+  .experience {
+    margin-top: 3rem;
+  }
+
+  .sectionTitle {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .timeline {
+    padding-left: 1.75rem;
+  }
+
+  .timeline::before {
+    left: 4px;
+  }
+
+  .timelineDot {
+    left: calc(-1.75rem - 2px);
+    width: 10px;
+    height: 10px;
+  }
+}
+
+/* Mobile */
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 1.5rem 1rem;
+  }
+
+  .hero {
+    min-height: auto;
+    margin-bottom: 2rem;
+  }
+
+  .heroContent {
+    gap: 1.5rem;
+  }
+
+  .name {
+    font-size: 1.85rem;
+  }
+
+  .title {
+    font-size: 1.05rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .description {
+    font-size: 0.88rem;
+    line-height: 1.7;
+    margin-bottom: 1.75rem;
+  }
+
+  .expertise {
+    margin-bottom: 2rem;
+  }
+
+  .expertiseTitle {
+    font-size: 0.8rem;
+    margin-bottom: 0.85rem;
+  }
+
+  .expertiseGrid {
+    gap: 0.65rem;
+  }
+
+  .expertiseTag {
+    font-size: 0.78rem;
+    padding: 0.55rem 1rem;
+  }
+
+  .actions {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.85rem;
+  }
+
+  .primaryButton,
+  .secondaryButton {
+    width: 100%;
+    padding: 0.85rem;
+    font-size: 0.88rem;
+  }
+
+  .imageWrapper {
+    width: 160px;
+    height: 160px;
+  }
+
+  .experience {
+    margin-top: 2rem;
+  }
+
+  .sectionTitle {
+    font-size: 1.3rem;
+    margin-bottom: 1.35rem;
+  }
+
+  .timeline {
+    padding-left: 1.5rem;
+  }
+
+  .timeline::before {
+    left: 4px;
+  }
+
+  .timelineDot {
+    left: calc(-1.5rem - 2px);
+    width: 10px;
+    height: 10px;
+  }
+
+  .timelineItem {
+    margin-bottom: 1.5rem;
+  }
+
+  .timelineContent {
+    padding: 1.25rem;
+  }
+
+  .timelineHeader {
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .period {
+    align-self: flex-start;
+  }
+
+  .jobTitle {
+    font-size: 1rem;
+  }
+
+  .company {
+    font-size: 0.85rem;
+  }
+
+  .jobDescription {
+    font-size: 0.85rem;
+    line-height: 1.6;
+  }
+}
+
+/* Small mobile */
+@media screen and (max-width: 480px) {
+  .container {
+    padding: 1.25rem 0.75rem;
+  }
+
+  .hero {
+    margin-bottom: 1.75rem;
+  }
+
+  .heroContent {
+    gap: 1.25rem;
+  }
+
+  .name {
+    font-size: 1.65rem;
+  }
+
+  .title {
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+  }
+
+  .description {
+    font-size: 0.82rem;
+    line-height: 1.65;
+    margin-bottom: 1.5rem;
+  }
+
+  .expertiseTitle {
+    font-size: 0.75rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .expertiseTag {
+    font-size: 0.72rem;
+    padding: 0.5rem 0.8rem;
+  }
+
+  .imageWrapper {
+    width: 140px;
+    height: 140px;
+  }
+
+  .actions {
+    gap: 0.75rem;
+  }
+
+  .primaryButton,
+  .secondaryButton {
+    padding: 0.8rem;
+    font-size: 0.85rem;
+  }
+
+  .experience {
+    margin-top: 1.75rem;
+  }
+
+  .sectionTitle {
+    font-size: 1.2rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .timelineItem {
+    margin-bottom: 1.25rem;
+  }
+
+  .timelineContent {
+    padding: 1.1rem;
+  }
+
+  .jobTitle {
+    font-size: 0.95rem;
+  }
+
+  .company {
+    font-size: 0.8rem;
+  }
+
+  .jobDescription {
+    font-size: 0.82rem;
+  }
+}
+

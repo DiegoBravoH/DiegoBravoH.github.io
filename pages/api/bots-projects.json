@@ -1,0 +1,10 @@
+[
+  {
+    "id": 1,
+    "name": "VLMs",
+    "image": "https://github.com/DiegoBravoH/EndoNavQA/blob/main/figures/Pipeline.jpg?raw=true",
+    "description": "When Vision-Language Models Look but Don't See: Anatomical Bias in Endoscopic Spatial Reasoning",
+    "tags": ["Gemini", "GPT", "JanusPro-7B", "LLaMA3.2", "VLMs", "Python"],
+    "source_code": "https://github.com/DiegoBravoH/EndoNavQA.git"  }
+
+]

@@ -2,25 +2,29 @@
 ======= 0) Access to the project =====
 ======================================
 cd github/
-cd Jekyll/
-cd DiegoBravoH.github.io/
+cd drkostas.github.io
+
 ======================================
 ========= 1) Validate versions =======
-======================================
-input: ruby -v
-output: ruby 3.2.3 (2024-01-18 revision 52bb2ac0a6) [x64-mingw-ucrt]
+====================================== 	
+Valida:
+node -v
+npm -v
 
-#input: gem install jekyll bundler
-======================================
-========= 2) Lauch jekyll ============
-======================================
-Option 1:
-		bundle exec jekyll serve
-Option 2:
-		jekyll serve
-http://127.0.0.1:4000
+Instala dentro del cd drkostas.github.io: 
+npm install
 
-git rm --cached run_gitbash_paths.txt
+Crear_: 
+cp .env.local.example .env.local
+
+======================================
+========= 2) Lauch project ============
+======================================
+ahmadawais.shades-of-purple
+
+
+npm run dev
+http://localhost:3000
 
 ======================================
 ====== 3) Navegar en archivos ========

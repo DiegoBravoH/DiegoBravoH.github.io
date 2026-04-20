@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "name": "GastroHUN",
+    "image": "https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs41597-025-04401-5/MediaObjects/41597_2025_4401_Fig1_HTML.png?as=webp",
+    "description": "Official Code of the Journal Paper -Nature 'GastroHUN an Endoscopy Dataset of Complete Systematic Screening Protocol for the Stomach'",
+    "tags": ["PyTorch", "Endoscopy", "Computer-Vision", "Dataset"],
+    "source_code": "https://github.com/Cimalab-unal/GastroHUN.git",
+    "scholar": "https://www.nature.com/articles/s41597-025-04401-5"
+  
+  },
+  {
+    "id": 2,
+    "name": "MSSI",
+    "image": "/MICCAI_2025.jpg",
+    "description": "Official Code of the paper 'Automated Auditing of Upper Endoscopy Procedure Times: A Temporal Multiclass Analysis'",
+    "tags": ["PyTorch", "Endoscopy", "Computer-Vision", "Auditory Analysis"],
+    "source_code": "https://github.com/Cimalab-unal/EndoAudit.git",
+    "scholar": "https://papers.miccai.org/miccai-2025/paper/3297_paper.pdf"
+  },
+  {
+    "id": 3,
+    "name": "H-pilory",
+    "image": "/TMI-2026.png",
+    "description": "Official Code of the Journal Paper - TMI 'Spatio-temporal characterization of gastric distensibility in upper endoscopy identifies the presence of Helicobacter pylori'",
+    "tags": ["PyTorch", "Keras", "TensorFlow", "Endoscopy", "Computer-Vision", "H-pilory infection"],
+    "source_code": "https://github.com/Cimalab-unal/3dSpatioTempFeatures.git",
+    "scholar": "https://ieeexplore.ieee.org/document/11426979"
+  }
+]

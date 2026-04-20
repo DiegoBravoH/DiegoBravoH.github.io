@@ -1,0 +1,68 @@
+import styles from '../styles/ContactCode.module.css';
+
+const contactItems = [
+  {
+    social: 'Email',
+    link: 'diegofbravoh@gmail.com',
+    href: 'mailto:diegofbravoh@gmail.com',
+  },
+  {
+    social: 'LinkedIn',
+    link: 'linkedin.com/in/ingdiegobravo',
+    href: 'https://www.linkedin.com/in/ingdiegobravo/',
+  },
+  {
+    social: 'GitHub',
+    link: 'github.com/DiegoBravoH',
+    href: 'https://github.com/DiegoBravoH',
+  },
+  {
+    social: 'Google Scholar',
+    link: 'scholar.google.com/DiegoBravo',
+    href: 'https://scholar.google.com/citations?user=S47_4IcAAAAJ&hl',
+  },
+  {
+    social: 'PyPi',
+    link: 'pypi.org/user/diegobravo',
+    href: 'https://pypi.org/user/diegobravo/',
+  },
+  {
+    social: 'Website',
+    link: 'gkos.dev',
+    href: 'https://gkos.dev',
+  },
+];
+
+const ContactCode = () => {
+  return (
+    <div className={styles.code}>
+       <p className={styles.line}>
+       tag: <a>production</a>
+        </p>
+      <p className={styles.line}>
+        <span>diego</span>&#58;
+      </p>
+      <p className={styles.line}>
+        &nbsp;&nbsp;&nbsp;&#8212; <span>socials</span>&#58;
+      </p>
+      {contactItems.slice(0, 8).map((item, index) => (
+        <p className={styles.line} key={index}>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{item.social}:{' '}
+          <a href={item.href} target="_blank" rel="noopener">
+            {item.link}
+          </a>
+        </p>
+      ))}
+      {contactItems.slice(8, contactItems.length).map((item, index) => (
+        <p className={styles.line} key={index}>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{item.social}:{' '}
+          <a href={item.href} target="_blank" rel="noopener">
+            {item.link}
+          </a>
+        </p>
+      ))}
+    </div>
+  );
+};
+
+export default ContactCode;

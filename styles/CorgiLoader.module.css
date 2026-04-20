@@ -1,0 +1,75 @@
+.wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.track {
+  width: 100%;
+  height: 92px;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/*
+  Ciclo 40s total, 8 apariciones.
+  CROSSING 1: oreo LTR (t=0) + redvelvet RTL (t=2)  — se cruzan ~t=3
+  SOLO:       chocolatechip RTL (t=8), KINAKO RTL (t=14)
+  CROSSING 2: crab LTR (t=20) + MANEKI RTL (t=22)   — se cruzan ~t=23
+  SOLO:       MIDNIGHT RTL (t=28), crab RTL (t=34)
+
+  Cada GIF es visible ~10% del ciclo (~4s). Durante los cruces hay 2 GIFs
+  simultáneos en pantalla moviéndose en direcciones opuestas.
+
+  Fix del "slide back":
+    - El corgi sale naturalmente OFF-SCREEN
+    - Primero se vuelve invisible (opacity 0) estando ya fuera de pantalla
+    - Solo DESPUÉS se teletransporta al lado opuesto (aún invisible)
+    - El overflow:hidden del track garantiza que nada se vea durante la espera
+*/
+
+.corgi {
+  position: absolute;
+  bottom: 0;
+  animation-duration: 40s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-fill-mode: backwards;
+}
+
+.ltr { animation-name: runLTR; }
+.rtl { animation-name: runRTL; }
+
+.gif {
+  height: 88px;
+  width: auto;
+}
+
+/* RTL: entra derecha → sale izquierda */
+@keyframes runRTL {
+  0%    { left: calc(100% + 20px);  opacity: 1; }  /* aparece derecha */
+  9%    { left: -110px;             opacity: 1; }  /* casi fuera izquierda */
+  10%   { left: -220px;             opacity: 0; }  /* totalmente fuera, fade out */
+  11%   { left: calc(100% + 20px);  opacity: 0; }  /* teletransporte invisible */
+  100%  { left: calc(100% + 20px);  opacity: 0; }  /* espera oculto */
+}
+
+/* LTR: entra izquierda → sale derecha */
+@keyframes runLTR {
+  0%    { left: -220px;             opacity: 1; }  /* aparece izquierda */
+  9%    { left: calc(100% + 110px); opacity: 1; }  /* casi fuera derecha */
+  10%   { left: calc(100% + 220px); opacity: 0; }  /* totalmente fuera, fade out */
+  11%   { left: -220px;             opacity: 0; }  /* teletransporte invisible */
+  100%  { left: -220px;             opacity: 0; }  /* espera oculto */
+}
+
+.loadingText {
+  margin-top: 1rem;
+  font-size: 0.85rem;
+  color: var(--text-color);
+  opacity: 0.45;
+  font-style: italic;
+  letter-spacing: 0.4px;
+}

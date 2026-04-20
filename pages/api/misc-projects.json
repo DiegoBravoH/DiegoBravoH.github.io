@@ -1,0 +1,10 @@
+[
+  {
+    "id": 1,
+    "name": "App-Diversa",
+    "image": "https://www.dane.gov.co/files/images/noticias/Feb28-02_App-Diversa_1000x366-1.jpg",
+    "description": "Effortlessly create personalized Spotify playlists with fresh, undiscovered tracks tailored to your taste, by checking all your liked songs and existing playlists to provide you with truly new music.",
+    "tags": ["SDG-16b1", "Stadistic","Bubble.io"],
+    "demo": "https://www.dane.gov.co/index.php/actualidad-dane/5602-dane-lanza-aplicacion-que-mide-la-probabilidad-de-experimentar-discriminacion-como-piloto-de-recoleccion-de-datos"
+  }
+]

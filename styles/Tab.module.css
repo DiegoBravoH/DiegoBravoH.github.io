@@ -1,0 +1,75 @@
+.tabWrapper {
+  cursor: grab;
+  transition: all 0.2s ease;
+}
+
+.tabWrapper:active {
+  cursor: grabbing;
+}
+
+.tabWrapper.dragging {
+  opacity: 0.5;
+  cursor: grabbing;
+}
+
+.tabWrapper.dragOver .tab {
+  border-left: 2px solid var(--accent-color);
+  background: rgba(255, 255, 255, 0.05);
+  transform: scale(1.02);
+}
+
+.tab {
+  padding: 0.5rem 1.25rem;
+  background: var(--tab-bg);
+  color: #ececec;
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--tab-border);
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.tab p {
+  margin-left: 5px;
+  pointer-events: none;
+}
+
+.tab img {
+  pointer-events: none;
+}
+
+.active {
+  border-top: 2px solid var(--accent-color);
+  background: var(--tab-active-bg);
+  border-bottom: none;
+}
+
+@media screen and (max-width: 900px) {
+  .tab {
+    font-size: 0.8rem;
+    padding: 0.4rem 1rem;
+  }
+
+  .tab img {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .tab {
+    font-size: 0.75rem;
+    padding: 0.35rem 0.85rem;
+  }
+
+  .tab img {
+    width: 14px;
+    height: 14px;
+  }
+
+  .tab p {
+    margin-left: 3px;
+  }
+}

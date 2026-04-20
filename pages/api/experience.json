@@ -1,0 +1,66 @@
+[
+  {
+    "id": "atenea-bogota-district",
+    "title": "ML Engineer · Medical Video AI",
+    "company": "Bogotá District Government",
+    "location": "CO",
+    "period": "2026 - Present",
+    "description": "Designed, implemented, and validated deep learning models for medical video analysis, improving diagnostic accuracy by 93%. Built and deployed real-time processing pipelines handling 15fps with sub-30ms latency."
+  },
+  {
+    "id": "pork-colombia-livestock-ai",
+    "title": "Co-Founder & ML Engineer",
+    "company": "Livestock AI Platform",
+    "location": "CO",
+    "period": "2026 - Present",
+    "description": "Building an AI platform that helps low-income farmers in Colombia monitor livestock well-being, reducing supervision costs by 65%. Spearheaded real-time deep learning inference for remote, low-connectivity environments, achieving 95% accuracy in animal health scanning."
+  },
+  {
+    "id": "guaitara-endoscopy-ai-auditing",
+    "title": "ML Researcher · Clinical AI",
+    "company": "Universidad Nacional de Colombia",
+    "location": "CO",
+    "period": "2023 - Present",
+    "description": "Built a self-supervised learning framework using masked image modeling and DINO for real-time automated quality auditing of endoscopic procedures. Led the release of the first public dataset in this clinical domain, published in a Nature-family journal and presented at MICCAI. Achieved >85% accuracy across procedure classes. Masked modeling yielded up to +15% over state-of-the-art baselines. Custom fine-tuning strategies cut training time by 30% and improved macro F1 by 10%."
+  },
+  {
+    "id": "dane-data-science-researcher",
+    "title": "Data Scientist · ML Researcher",
+    "company": "DANE — National Statistics Institute of Colombia",
+    "location": "CO",
+    "period": "2020 - 2022",
+    "description": "Researched and implemented ML and Big Data pipelines for two national-scale government initiatives. Built a nowcasting model to estimate early GDP figures for Colombia's agricultural sector using alternative and high-frequency data sources. Co-developed a data collection app measuring the likelihood of discrimination experiences across population groups, as part of a national pilot for evidence-based public policy."
+  },
+  {
+    "id": "umng-ai-robotics-professor",
+    "title": "Lecturer · AI & Robotics",
+    "company": "Universidad Militar Nueva Granada",
+    "location": "CO",
+    "period": "2021 - 2022",
+    "description": "Taught 2–3 undergraduate courses covering machine learning, computer vision, robotics and control, classical AI, and applied programming. Designed coursework bridging theoretical foundations with hands-on implementation, preparing engineering students for real-world AI and autonomous systems challenges."
+  },
+  {
+    "id": "cimalab-research-assistant",
+    "title": "Research Assistant · ML & Computer Vision",
+    "company": "Universidad Nacional de Colombia",
+    "location": "CO",
+    "period": "2014 - Present",
+    "description": "Long-term member of the CimaLab research group. Conducted research in machine learning and computer vision across medical imaging, remote sensing, and video analysis. Authored and co-authored 7+ papers published in top-tier international conferences and journals including MICCAI and IEEE, consistently advancing the state of the art in these domains."
+  },
+  {
+    "id": "quirumedica-engineering-lead",
+    "title": "Engineering Lead · Medical Devices",
+    "company": "Pharmaceutical - Quirumedica Ltda",
+    "location": "CO",
+    "period": "2014 - 2017",
+    "description": "Led the engineering team overseeing maintenance of medical equipment, manufacturing processes, quality control, and supplier management. Improved operational efficiency by 15%, reduced unplanned downtime by 8%, and maintained 100% compliance with Good Manufacturing Practices (GMP) standards."
+  },
+  {
+    "id": "gav-research-assistant",
+    "title": "Research Assistant · Robotics & Computer Vision",
+    "company": "Universidad Militar Nueva Granada",
+    "location": "CO",
+    "period": "2013 - 2014",
+    "description": "Member of the GAV research group. Contributed to a small team developing a rapid prototype for remote operation of a Mitsubishi robotic manipulator. Built the lab interface software, implemented computer vision modules for spatial awareness, and designed the communication layer enabling remote control. The system was deployed and used internally within the robotics laboratory."
+  }
+]

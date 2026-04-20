@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "title": "Why Claude Code Is the Developer Tool of This Era",
+    "date": "2026-04-15",
+    "readTime": 1,
+    "category": "Productivity",
+    "tags": ["AI", "Claude Code", "Developer Tools"],
+    "description": "Software development has always evolved with its tools — from assembly to IDEs, from manual testing to CI/CD. Claude Code represents the next leap: an AI that doesn't just autocomplete, but reasons about your entire codebase, plans multi-step changes, and executes them with context. The difference from a code snippet generator is fundamental. Claude Code understands architecture, reads across files, and catches the downstream effects of a change before you make it. For developers, this shifts the bottleneck from writing code to making decisions. Junior developers can tackle complex refactors with architectural guardrails. Senior developers can prototype faster without losing quality. The question is no longer whether AI will be part of the stack — it already is. The question is whether you use it reactively, pasting snippets into a chat, or proactively, as an agent that works alongside you. This era rewards developers who treat AI as a collaborator, not a shortcut. Claude Code is the clearest example of what that collaboration looks like in practice."
+  },
+  {
+    "id": 2,
+    "title": "From Junior to Senior: How AI Closes the Experience Gap",
+    "date": "2026-04-15",
+    "readTime": 1,
+    "category": "Career",
+    "tags": ["Career", "AI", "Software Engineering", "Growth"],
+    "description": "The traditional path from junior to senior engineer is built on exposure — reviewing legacy systems, debugging production incidents, inheriting other people's decisions. That takes years. AI compresses it. With tools like Claude Code, a junior developer can ask why a design decision was made, get an explanation of an unfamiliar codebase in minutes, or receive feedback on their code that mirrors what a senior would say in review. This doesn't replace experience — it accelerates the feedback loop. What used to take a year of working on real systems can now happen in months when you actively engage with AI as a learning partner. The key mindset shift: don't use AI to skip understanding. Use it to understand faster. Ask it to explain, not just generate. Ask it why, not just what. Seniors become seniors because they've seen patterns across many systems. AI gives junior developers access to those patterns earlier. The gap isn't closing because juniors are doing less — it's closing because the tools for building intuition have never been more accessible."
+  },
+  {
+    "id": 3,
+    "title": "Why AI in Medical Imaging Is No Longer Optional",
+    "date": "2026-04-15",
+    "readTime": 1,
+    "category": "Medical AI",
+    "tags": ["AI", "Medical Imaging", "Healthcare", "Deep Learning"],
+    "description": "In upper endoscopy, studies show that up to 20% of early gastric lesions go undetected during routine procedures. Not because of negligence — but because the human visual system has limits, procedures are time-constrained, and attention degrades. AI doesn't get tired. It processes every frame of a video endoscopy with the same precision as the first. The role of AI in medical imaging is not to replace the specialist but to act as a second reader — one that flags blind spots, audits procedural completeness, and surfaces patterns too subtle for real-time human detection. The barrier to adoption used to be data scarcity and model interpretability. Both are changing. Public datasets like GastroHUN now provide curated, expert-annotated collections. Models trained with self-supervised learning generalize better with less labeled data. And explainability tools are making AI decisions auditable in clinical contexts. The next decade will not debate whether AI belongs in clinical workflows. It will debate which AI is trustworthy enough to be there. Building that trust requires rigorous datasets, honest benchmarks, and clinician collaboration — exactly what makes medical AI research worth doing."
+  }
+]

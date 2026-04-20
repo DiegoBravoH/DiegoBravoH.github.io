@@ -1,0 +1,110 @@
+[
+  {
+    "id": 1,
+    "title": "GastroHUN an Endoscopy Dataset of Complete Systematic Screening Protocol for the Stomach",
+    "citations": 12,
+    "year": 2025,
+    "conference": "Scientific Data, 2025 - nature.com",
+    "abstract": "Endoscopy is vital for detecting and diagnosing gastrointestinal diseases. Systematic examination protocols are key to enhancing detection, particularly for the early identification of premalignant conditions. Publicly available endoscopy image databases are crucial for machine learning research, yet challenges persist, particularly in identifying upper gastrointestinal anatomical landmarks to ensure effective and precise endoscopic procedures. However, many existing datasets have inconsistent labeling and limited accessibility, leading to biased models and reduced generalizability. This paper introduces GastroHUN, an open dataset documenting stomach screening procedures based on a systematic protocol. GastroHUN includes 8,834 images from 387 patients and 4,729 labeled video sequences, all annotated by four experts. The dataset covers 22 anatomical landmarks in the stomach and includes an additional category for unqualified images, making it a valuable resource for AI model development. By providing a robust public dataset and baseline deep learning models for image and sequence classification, GastroHUN serves as a benchmark for future research and aids in the development of more effective algorithms.",
+    "link": "https://www.nature.com/articles/s41597-025-04401-5.pdf"
+  },
+  {
+    "id": 2,
+    "title": "Spatio-temporal characterization of gastric distensibility in upper endoscopy identifies the presence of Helicobacter pylori",
+    "citations": 0,
+    "year": 2026,
+    "conference": "IEEE TRANSACTIONS ON MEDICAL IMAGING",
+    "abstract": " Assessment of gastric distensibility is crucial for understanding various gastrointestinal disorders, particularly those affecting gastric motility and reflux conditions. Gastric distensibility can be altered by pathological conditions such as linitis plastica or gastric mucosal inflammation, as seen in Helicobacter pylori infections. Although distensibility is evaluated during routine endoscopy, the assessment remains purely visual. Moreover, some specialized endoscopic tools assess only specific gastric regions and are often unavailable. Artificial intelligence tools may used to estimate the gastric threedimensional surface from the endoscopy video and capture temporal distensibility changes of the gastric surface. This paper introduces a novel spatio-temporal characterization of the gastric distensibility during a routine endoscopy procedure. The method reconstructs the gastric surface for each frame of a short endoscopy video using a shapefrom-shading network trained with a synthetic endoscopy collection. Local and regional changes in surface bending are then quantified, which herein depend on the distensibility. This spatio-temporal characterization was applied to a group of 160 patients, among them 60 diagnosed with Helicobacter pylori confirmed by pathology examination. The obtained characteristics in three different regions: body, antrum, and pylorus, demonstrated significant differences between patients with and without Helicobacter pylori under a t-test (p < 0.05). The proposed method effectively captures subtle gastric wall bending from routine endoscopy videos, providing a strategy for analyzing distensibility ",
+    "link": "https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=11426979"
+  },
+  {
+    "id": 3,
+    "title": "Automated Auditing of Upper Endoscopy Procedure Times: A Temporal Multiclass Analysis",
+    "citations": 1,
+    "year": 2025,
+    "conference": "MICCAI 2025 - Main Conference",
+    "abstract": "Upper endoscopy is the preferred method for detecting earlystage gastrointestinal diseases and plays a crucial role in managing gastric cancer. Quality assessment has been a recurring concern in clinical research, particularly regarding the time specialists spend examining different anatomical sites. While current guidelines emphasize thorough inspection and documentation to minimize blind spots, adherence remains low due to the lack of second readers. State-of-the-art automatic approaches audit single-frame or fixed temporal windows, with limited performance in real applications. This paper introduces the Multi-Scale Sequence Informative (MSSI) module, a Transformer-based attention mechanism that audits video sequences across multiple temporal scales. The proposed approach estimates the time spent exploring different organs and regions of the stomach. The method processes 15 to 196 tokens (1 to 13 seconds) by a sliding window, building up a mosaic of sampled frames. Each frame is encoded with a pre-trained endoscopy embedding which feeds a Vision Transformer to capture short-, mid-, and long-range dependencies. The approach is evaluated with 233 endoscopic procedures (∼1.6 million frames), demonstrating a close alignment between estimated procedural times and expert-validated standards. It achieved 92.03% macro precision in organ classification and 89.34% in distinguishing 23 specific views of different stomach sites, a total of 27 classes to audit, showing real potential to be applicable in real clinical scenarios. Our code is available at https://github.com/Cimalab-unal/EndoAudit.git.",
+    "link": "https://papers.miccai.org/miccai-2025/paper/3297_paper.pdf"
+  },
+  {
+    "id": 4,
+    "title": "Self-Supervised Learning for Multi-Category Endoscopy Classification and Data Quality Evaluation Using Masked Autoencoders",
+    "citations": 1,
+    "year": 2025,
+    "conference": "ISBI 2025",
+    "abstract": "In upper and lower endoscopy (EN), gastroenterologists must identify multiple anatomical landmarks, lesions, and indicators of patient preparation, requiring the recognition of patterns that may elude the human eye, leading to 6-28% of lesions being missed. Computer-assisted second reader strategies may aid specialist by accurately differentiating multiple patterns. However, labeled collections are scarce for training, though some provide unlabeled frames. This paper leverages a large-scale, unlabeled dataset to train a self-supervised learning (SSL) approach, a masked autoencoder, to identify multiple EN categories. The pretrained masked-encoder is then supervised fine-tuning on a smaller, labeled subset, in a multiclass classification task. The performance of this method was evaluated on two EN datasets: HyperKvasir, which contains 99,417 unlabeled and 10,662 labeled frames, and GastroVision, which includes 8,000 labeled frames, achieving F-scores of 89.23% in 16 EN categories and 77.40% in 22, respectively. The proposed approach demonstrates the effectiveness of a SSL approach in EN, and improves classification performance with data quality control by leveraging learned embeddings to identify and remove duplicate images within the dataset. We also provide code and materials related to this work, which can be found at https://github.com/DiegoBravoH/SSL-Endoscopy-MAE.git.",
+    "link": "https://ieeexplore.ieee.org/document/10980752"
+  },
+  {
+    "id": 5,
+    "title": "Automatic Auditing System for Endoscopic Exploration of the Stomach with Artificial Intelligence-Gastro UNAL: Gastroendoscopy UNit for Automatic Labeling",
+    "citations": 1,
+    "year": 2024,
+    "conference": "Revista colombiana de Gastroenterología, 2024",
+    "abstract": "Upper endoscopy is the standard method for diagnosing early-stage gastric cancer. However, according to estimates, up to 20% of tumors are not detected, and their accuracy may be affected by the variability in their performance. In Colombia, most diagnoses take place in advanced stages, which aggravates the problem. Protocols have been proposed to ensure the complete observation of areas prone to premalignant lesions to address variability. To build and validate an automatic audit system for endoscopies using artificial intelligence techniques. In this study, 96 patients from a teaching hospital underwent video-documented endoscopies, spanning 22 stations rearranged to minimize overlaps and improve the identification of 13 key gastric regions. An advanced convolutional network was used to process the images, extracting visual characteristics, which facilitated the training of artificial intelligence in the classification of these areas. The model, called Gastro UNAL, was trained and validated with images of 67 patients (70% of cases) and tested with 29 different patients (30% of cases), which reached an average sensitivity of 85,5% and a specificity of 98,8% in detecting the 13 gastric regions. The effectiveness of the model suggests its potential to ensure the quality and accuracy of endoscopies. This approach could confirm the regions evaluated, alerting less experienced or trained endoscopists about blind spots in the examinations, thus, increasing the quality of these procedures.",
+    "link": "http://www.scielo.org.co/scielo.php?pid=S0120-99572024000200133&script=sci_arttext"
+  }, 
+  {
+    "id": 6,
+    "title": "Estimating Polyp Size From a Single Colonoscopy Image Using a Shape-From-Shading Model",
+    "citations": 4,
+    "year": 2024,
+    "conference": "ISBI 2024",
+    "abstract": "Colonoscopy (CO) is the most useful procedure to estimate the polyp size as part of surveillance and therapeutic management to prevent Colorectal cancer. Studies have reported a high rate of misestimated lesions by experts, reaching a relative accuracy of 67%. This work presents a method to estimate polyp size from a raw CO frame. A shape-from-shading model trained with synthetic images estimates a depth map to reconstruct the three-dimensional (3d) colon structure. Polyp is segmented in RGB image with a U-Net, to compute diameter in pixels. This diameter is projected onto the 3d surface to compute polyp size in millimeters. The method obtained a mean absolute error of 2.16 mm and relative accuracy of 88.17% in 2802 synthetic images, and 2.06 mm in 100 real images. In a binary classification task (< 10 mm or > 10 mm), the method achieved macro F1 scores of 89% and 72% in the synthetic and real databases respectively.",
+    "link": "https://ieeexplore.ieee.org/document/10635358"
+  },
+  {
+    "id": 7,
+    "title": "Automatic Endoscopy Classification by Fusing Depth Estimations and Image Information",
+    "citations": 4,
+    "year": 2024,
+    "conference": "ISBI 2024",
+    "abstract": "Gastric cancer ranks as the fifth leading cause of cancer mortality worldwide. The quality of upper gastrointestinal endoscopy is crucial towards early identification of premalignant conditions and relies on the endoscopist’s skill and thorough examination of stomach landmarks. Unfortunately, it has been observed that existing cancerous lesions may go undetected during examination. To standardize the quality of this procedure, meticulous protocols have been proposed. To support this process, we focused on developing a model to identify the anatomical locations in esophagogastroduodenoscopy images. This study advances endoscopic image classification by incorporating depth map estimation, essential for measuring distances to specific landmarks. This method, analyzing 2,054 images from 96 patients across 13 gastric regions using the ConvNeXT architecture with information fusion techniques, achieved an 87% F1 macro score. This approach suggests that depth map integration can improve stomach region classification, boosting prediction accuracy and potentially reducing missed gastric lesions.",
+    "link": "https://ieeexplore.ieee.org/document/10635452"
+  },
+  {
+    "id": 8,
+    "title": "Colombian Agricultural Sector’s Early Estimator of Gross Domestic Production Using Nowcasting and Big Data Methods",
+    "citations": 2,
+    "year": 2024,
+    "conference": "Journal of technology management & innovation, 2024",
+    "abstract": "Facing challenges like the COVID-19 pandemic, statistical production increasingly relies on non-traditional data sources for timely and accurate information. In this regard, The National Statistical Office of Colombia (DANE, by its acronym in Spanish) initiated a project, supported by the Statistics Advisory Council, to develop an early estimator for the Colombian agricultural sector. This paper presents the results for the implementation of a Ridge model and Zero Shot Classification to estimate the Gross Domestic Product (GDP) of the agricultural sector, leveraging Google News and Google Trends. Results reveal that these alternative sources offer valuable insights into economic trends. Combining machine learning techniques with Nowcasting methods yielded precise projections. The Ridge method demonstrated the lowest estimation error, providing an early GDP indicator for the agricultural sector of 8,188 billion Colombian pesos for 2022 Q2, 30 days ahead of official publication.",
+    "link": "https://www.scielo.cl/scielo.php?pid=S0718-27242024000200054&script=sci_arttext"
+  },
+  {
+    "id": 9,
+    "title": "Generating synthetic endoscopy videos following a systematic screening protocol",
+    "citations": 3,
+    "year": 2023,
+    "conference": "SIPAIM, 2023",
+    "abstract": "Gastric diseases are a considerable burden world-wide and Upper endoscopy or Esophagogastroduodenoscopy (EGD) is the gold standard for their diagnosis, a procedure highly dependent on the gastroenterologist’s experience. Overall, 11.3% of lesions are misdiagnosed during a routine EGD, despite a systematic stomach screening protocol (SSS) is followed to avoid blind spots. EGD diagnosis may be supported by providing annotated video collections useful to develop and compare computational strategies as second readers for SSS, or as study cases for trainees. However, generating videos with SSS annotations is a highly time-consuming task for an expert, and none of the existent collections are publicly available. Therefore, virtually modeling the EGD procedure may allow the generation of synthetic videos with SSS annotations. In this work, a collection of synthetic videos simulating EGD procedures is constructed in a virtual environment. A stomach model is developed upon reported averaged measurements and modified to achieve different realistic appearances by integrating organ deformations, gastric rugae, inner stomach irregularities, and tissue appearance. A virtual camera and light source are displaced within the modified stomach model following a path that emulates a typical SSS, generating an annotated video with 22 anatomic SSS landmarks. Likewise, shape information, i.e., a depth map for each frame, is provided. Finally, 50 videos were rendered with 315,000 frames and released for public access, available at http://cimalab.unal.edu.co/?lang=en&mod=software.",
+    "link": "https://ieeexplore.ieee.org/document/10373484"
+  },
+  {
+    "id": 10,
+    "title": "Automated Anatomical Classification and Quality Assessment of Endoscopy by Temporal-Spatial Analysis",
+    "citations": 3,
+    "year": 2023,
+    "conference": "SIPAIM, 2023",
+    "abstract": "Gastric cancer is the fourth deadliest cancer worldwide. Esophagogastroduodenoscopy (EGD) is the preferred method to diagnose upper gastrointestinal lesions, particularly early gastric cancer. The procedure’s success relies on the endoscopist’s experience and a comprehensive examination by observing a set of anatomical landmarks. Most gastric neoplasias are undetected during early stages, despite being present during examinations, thus, it is essential to evaluate the quality and audit the examination of anatomical regions during the endoscopy procedure. This study assesses the performance of a recurrent neural network and transformer architecture in classifying anatomical and sub-anatomical regions within the gastrointestinal tract. By leveraging temporal information, the study aims to enhance the accuracy of detecting these critical regions. We collected and labeled video endoscopies from 32 patients, organizing them into four organ categories. Additionally, we utilized 565 labeled sequences from six sub-anatomical stomach regions for a separate classification task. The trained networks achieved a macro F1-score of 87.25% for organ classification and an 85.31% in identifying stomach regions. These findings provide substantial evidence supporting that temporal information improves the capabilities of accurately identify upper gastrointestinal regions.",
+    "link": "https://ieeexplore.ieee.org/abstract/document/10373530"
+  },
+  {
+    "id": 11,
+    "title": "Automatic Classification of Esophagogastroduodenoscopy Sub-Anatomical Regions",
+    "citations": 8,
+    "year": 2023,
+    "conference": "ISBI, 2023",
+    "abstract": "Gastric cancer is the fourth most lethal malignancy worldwide. Esophagogastroduodenoscopy is the first choice procedure for diagnosis of upper gastrointestinal lesions, especially early gastric cancer. The success of this procedure depends on endoscopist’s skill and the rigorous exploration of the zones with high probability of being affected. It has been documented most gastric neoplasias are lesions already existent at the examination time and unobserved when early detection is possible. For a second reader, automatic strategies must first recognize gastric anatomic regions. The aim of this paper is to assess the performance of convolutional neural networks at classifying anatomical regions. 2.054 raw upper gastrointestinal endoscopic images from 96 patients were collected and labeled as six representative sub-anatomical stomach regions. The networks were trained with transfer learning, data augmentation, and two efficient learning methods: warm-up and fine-tuning. The top-10 macro F1-score rates of the testing dataset were 84% to 87%. These preliminary tests suggest the trained networks showed good performance in recognizing sub-anatomical stomach regions of esophagogastroduodenoscopy images.",
+    "link": "https://ieeexplore.ieee.org/abstract/document/10230483"
+  },
+  {
+    "id": 12,
+    "title": "Artificial intelligence techniques for the automatic detection of colorectal polyps",
+    "citations": 17,
+    "year": 2021,
+    "conference": "Revista colombiana de Gastroenterología, 2021",
+    "abstract": "Colorectal cancer (CRC) is one of the most prevalent malignant tumors worldwide. These neoplasms originate from adenomatous lesions or polyps that must be resected to prevent the development of the disease, and that can be done through a colonoscopy. Polyps are reported during colonoscopy in 40% of men and 30% of women (hyperplastic, adenomatous, serrated, among others), and, on average 25% are adenomatous polyps (the main indicator of quality in colonoscopy). However, these lesions are not easy to visualize because of the multiplicity of blind spots in the colon and human errors associated with the performance of the procedure. Several research works have reported that about 25% of colorectal polyps are overlooked or undetected during colonoscopy, and as a result, the patient may have interval cancer. These figures show the need for a second observer (artificial intelligence system) to reduce the possibility of not detecting polyps and prevent colon cancer as much as possible.",
+    "link": "https://www.redalyc.org/journal/3377/337766864003/337766864003.pdf"
+  }
+]
