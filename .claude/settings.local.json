@@ -18,7 +18,10 @@
       "Bash(curl -L -o corgi.gif \"https://media.tenor.com/images/c0c7e3c5a5ffc2dc7b11eb91c53fc8c6/tenor.gif\" -w \"%{http_code}\" --max-time 15 -s)",
       "Bash(curl -L -o corgi.gif \"https://raw.githubusercontent.com/DiegoBravoH/DiegoBravoH/main/corgi.gif\" -w \"%{http_code}\" --max-time 10 -s)",
       "Bash(curl -L -o corgi.gif \"https://i.imgur.com/pjNI1BY.gif\" -w \"%{http_code}\" --max-time 10 -s)",
-      "Bash(ls *)"
+      "Bash(ls *)",
+      "Bash(claude update *)",
+      "Bash(git add *)",
+      "Bash(curl -L \"https://miccai.org/index.php/assets/Uploads/_resampled/ResizedImageWzYwMCwyNDdd/Logo-reveal-image.png\" -o \"C:\\\\Users\\\\dbrav\\\\github\\\\Jekyll\\\\DiegoBravoH.github.io\\\\public\\\\logos\\\\miccai-logo.png\" --max-time 30)"
     ]
   }
 }

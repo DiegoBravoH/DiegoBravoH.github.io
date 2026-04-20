@@ -25,7 +25,7 @@ const ResumePage = () => {
     <div className={styles.container}>
       <div className={styles.header}>
         <h3>Resume</h3>
-        <a href={myResume} className={styles.downloadButton} download="Resume-KonstantinosGeorgiou.pdf">
+        <a href={myResume} className={styles.downloadButton} download="CV_Diego_Bravo.pdf">
           Download PDF
         </a>
       </div>

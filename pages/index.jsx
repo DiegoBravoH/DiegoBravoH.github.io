@@ -10,7 +10,7 @@ export default function HomePage({ experience }) {
         <div className={styles.heroContent}>
           <div className={styles.textSection}>
             <h1 className={styles.name}>Diego Bravo</h1>
-            <h2 className={styles.title}>Mechatronic Engineer</h2>
+            <h2 className={styles.title}>Enthusiastic Learner</h2>
 
             <p className={styles.description}>
               PhD Machine Learning Engineer with 4+ years building production ML systems
@@ -57,6 +57,43 @@ export default function HomePage({ experience }) {
                 alt="Diego Bravo"
               />
             </div>
+
+            <section className={styles.affiliations}>
+              <p className={styles.affiliationsLabel}>Memberships</p>
+              <div className={styles.affiliationsGrid}>
+                <a
+                  href="https://www.miccai.org"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.affiliationCard}
+                  aria-label="MICCAI Student Member — Medical Image Computing and Computer Assisted Intervention Society"
+                >
+                  <div className={styles.affiliationLogo}>
+                    <img src="/logos/miccai-logo.png" width={96} height={96} alt="MICCAI logo" />
+                  </div>
+                  <div className={styles.affiliationInfo}>
+                    <span className={styles.affiliationOrg}>MICCAI Society</span>
+                    <span className={styles.affiliationRole}>Student Member</span>
+                  </div>
+                </a>
+
+                <a
+                  href="https://www.ieee.org"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.affiliationCard}
+                  aria-label="IEEE Student Member — Institute of Electrical and Electronics Engineers"
+                >
+                  <div className={styles.affiliationLogo}>
+                    <img src="/logos/ieee-logo.svg" width={96} height={96} alt="IEEE logo" />
+                  </div>
+                  <div className={styles.affiliationInfo}>
+                    <span className={styles.affiliationOrg}>IEEE</span>
+                    <span className={styles.affiliationRole}>Student Member</span>
+                  </div>
+                </a>
+              </div>
+            </section>
           </div>
         </div>
       </div>

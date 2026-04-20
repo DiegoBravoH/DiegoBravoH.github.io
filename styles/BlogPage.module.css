@@ -157,6 +157,25 @@
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
+.expandButton {
+  display: inline;
+  margin-left: 0.4rem;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  color: var(--accent-color);
+  font-size: 0.85rem;
+  font-weight: 500;
+  opacity: 0.85;
+  transition: opacity 0.15s ease;
+}
+
+.expandButton:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
 /* Mobile */
 @media (max-width: 768px) {
   .pageWrapper {
