@@ -3,3 +3,10 @@ _site
 node_modules
 .DS_STORE
 run_gitbash_paths.txt
+
+.claude
+.claude_cache
+.claude_config
+.next
+target
+.env.local
