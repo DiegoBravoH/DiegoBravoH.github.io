@@ -1,40 +1,79 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+# ============================================================
+# Next.js build artifacts
+# ============================================================
+/.next/
+/out/
+/build
 
-# dependencies
+# ============================================================
+# Dependencies
+# ============================================================
 /node_modules
 /.pnp
 .pnp.js
 
-# testing
+# ============================================================
+# Environment files
+# .env.development and .env.production are safe to track
+# (only contain NEXT_PUBLIC_API_URL, no secrets).
+# .env.local holds real secrets — never commit it.
+# ============================================================
+.env.local
+.env*.local
+
+# ============================================================
+# Vercel
+# ============================================================
+.vercel
+
+# ============================================================
+# Testing / coverage
+# ============================================================
 /coverage
 
-# next.js
-/.next/
-/out/
-
-# production
-/build
-
-# misc
-.DS_Store
-*.pem
-
-# debug
+# ============================================================
+# Debug logs
+# ============================================================
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+.pnpm-debug.log*
 
-# local env files
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
+# ============================================================
+# OS-generated files
+# ============================================================
+.DS_Store
+Thumbs.db
+Desktop.ini
 
-# vercel
-.vercel
-.history
-.vscode
-.env.local
-CLAUDE.md
+# ============================================================
+# Editor / IDE local settings
+# (only local settings — shared workspace config can be tracked
+# by removing specific files from this block if needed)
+# ============================================================
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.history/
 
+# ============================================================
+# Claude Code — local-only files
+# .claude/agents/ and .claude/agent-memory/ are tracked.
+# settings.local.json is machine-specific — do not commit.
+# ============================================================
+.claude/settings.local.json
+
+# ============================================================
+# Misc build / temp artifacts specific to this project
+# ============================================================
+/target/
 run_gitbash_paths.txt
+
+# ============================================================
+# TLS / certificates (safety net)
+# ============================================================
+*.pem

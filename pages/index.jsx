@@ -1,12 +1,28 @@
+import { useState, useEffect } from 'react'
 import Link from 'next/link';
 import Image from "next/image";
+import dynamic from 'next/dynamic'
 import styles from '../styles/HomePage.module.css';
 import getExperience from './api/experience';
 
+const ParticlesBackground = dynamic(
+  () => import('../components/ParticlesBackground'),
+  { ssr: false }
+)
+
 export default function HomePage({ experience }) {
+  const [isMounted, setIsMounted] = useState(false)
+  const [isDesktop, setIsDesktop] = useState(false)
+
+  useEffect(() => {
+    setIsMounted(true)
+    setIsDesktop(window.innerWidth >= 768)
+  }, [])
+
   return (
     <div className={styles.container}>
       <div className={styles.hero}>
+        {isMounted && isDesktop && <ParticlesBackground />}
         <div className={styles.heroContent}>
           <div className={styles.textSection}>
             <h1 className={styles.name}>Diego Bravo</h1>
@@ -65,7 +81,7 @@ export default function HomePage({ experience }) {
                   href="https://www.miccai.org"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={styles.affiliationCard}
+                  className={`${styles.affiliationCard} ${styles.miccaiCard}`}
                   aria-label="MICCAI Student Member — Medical Image Computing and Computer Assisted Intervention Society"
                 >
                   <div className={styles.affiliationLogo}>
@@ -81,7 +97,7 @@ export default function HomePage({ experience }) {
                   href="https://www.ieee.org"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={styles.affiliationCard}
+                  className={`${styles.affiliationCard} ${styles.miccaiCard}`}
                   aria-label="IEEE Student Member — Institute of Electrical and Electronics Engineers"
                 >
                   <div className={styles.affiliationLogo}>

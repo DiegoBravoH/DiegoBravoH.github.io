@@ -28,8 +28,8 @@ const contactItems = [
   },
   {
     social: 'Website',
-    link: 'gkos.dev',
-    href: 'https://gkos.dev',
+    link: 'diegobravoh.github.io',
+    href: 'https://diegobravoh.github.io',
   },
 ];
 
