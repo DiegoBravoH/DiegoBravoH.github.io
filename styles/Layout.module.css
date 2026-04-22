@@ -20,7 +20,8 @@
 
 .content {
   scrollbar-width: 10px;
-  scrollbar-color: var(--accent-color);
+  scrollbar-color: var(--accent-color) var(--main-bg);
+  scroll-behavior: smooth;
 }
 
 .content::-webkit-scrollbar {
@@ -29,12 +30,20 @@
 
 .content::-webkit-scrollbar-track {
   background: var(--scrollbar-track-bg);
-  border-left: 1px solid #1e1f29;
+  border-left: 1px solid var(--sidebar-bg);
 }
 
 .content::-webkit-scrollbar-thumb {
   background: var(--scrollbar-thumb-bg);
-  border-left: 1px solid #1e1f29;
+  border-left: 1px solid var(--sidebar-bg);
+}
+
+.pageWrapper {
+  width: 100%;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
 }
 
 @media screen and (max-width: 768px) {

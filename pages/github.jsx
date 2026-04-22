@@ -35,12 +35,18 @@ const GithubPage = () => {
         const repoRes = await fetch(`https://api.github.com/users/${username}/repos?per_page=100`);
         const reposData = await repoRes.json();
 
-        // Fetch additional important research repo
-        const additionalRepoRes = await fetch(`https://api.github.com/repos/aicip/Cross-Scale-MAE`);
-        const additionalRepo = await additionalRepoRes.json();
+        // Fetch Cimalab-unal repos authored and maintained by Diego Bravo
+        const [gastroRes, endoRes] = await Promise.all([
+          fetch(`https://api.github.com/repos/Cimalab-unal/GastroHUN`),
+          fetch(`https://api.github.com/repos/Cimalab-unal/EndoAudit`),
+        ]);
+        const [gastroRepo, endoRepo] = await Promise.all([
+          gastroRes.json(),
+          endoRes.json(),
+        ]);
 
         // Combine and sort by stars
-        let repos = [...reposData, additionalRepo];
+        let repos = [...reposData, gastroRepo, endoRepo];
         repos = repos.sort((a, b) => b.stargazers_count - a.stargazers_count);
 
         setAllRepos(repos);
@@ -63,7 +69,7 @@ const GithubPage = () => {
 
   if (error) {
     return (
-      <div style={{ textAlign: 'center', padding: '2rem' }}>
+      <div className={styles.errorState}>
         <h3>Error loading GitHub data: {error}</h3>
       </div>
     );
@@ -71,7 +77,7 @@ const GithubPage = () => {
 
   if (!user) {
     return (
-      <div style={{ textAlign: 'center', padding: '2rem' }}>
+      <div className={styles.errorState}>
         <h3>No user data available</h3>
       </div>
     );

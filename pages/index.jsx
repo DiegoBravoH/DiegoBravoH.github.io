@@ -4,6 +4,7 @@ import Image from "next/image";
 import dynamic from 'next/dynamic'
 import styles from '../styles/HomePage.module.css';
 import getExperience from './api/experience';
+import LinkedinIcon from '../components/icons/LinkedinIcon';
 
 const ParticlesBackground = dynamic(
   () => import('../components/ParticlesBackground'),
@@ -57,6 +58,16 @@ export default function HomePage({ experience }) {
                   <span className={styles.buttonMain}>See CV & proof of impact</span>
                 </button>
               </Link>
+              <a
+                href="https://www.linkedin.com/in/ingdiegobravo"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.linkedinButton}
+                aria-label="Connect on LinkedIn"
+              >
+                <LinkedinIcon width={16} height={16} />
+                <span>Connect</span>
+              </a>
               <Link href="/contact">
                 <button className={styles.secondaryButton}>Contact</button>
               </Link>
@@ -85,7 +96,7 @@ export default function HomePage({ experience }) {
                   aria-label="MICCAI Student Member — Medical Image Computing and Computer Assisted Intervention Society"
                 >
                   <div className={styles.affiliationLogo}>
-                    <img src="/logos/miccai-logo.png" width={96} height={96} alt="MICCAI logo" />
+                    <Image src="/logos/miccai-logo.png" width={96} height={96} alt="MICCAI logo" />
                   </div>
                   <div className={styles.affiliationInfo}>
                     <span className={styles.affiliationOrg}>MICCAI Society</span>
@@ -101,7 +112,7 @@ export default function HomePage({ experience }) {
                   aria-label="IEEE Student Member — Institute of Electrical and Electronics Engineers"
                 >
                   <div className={styles.affiliationLogo}>
-                    <img src="/logos/ieee-logo.svg" width={96} height={96} alt="IEEE logo" />
+                    <Image src="/logos/ieee-logo.svg" width={96} height={96} alt="IEEE logo" />
                   </div>
                   <div className={styles.affiliationInfo}>
                     <span className={styles.affiliationOrg}>IEEE</span>

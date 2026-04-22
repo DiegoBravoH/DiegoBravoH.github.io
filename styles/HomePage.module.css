@@ -131,6 +131,11 @@
   filter: brightness(1.1);
 }
 
+.primaryButton:focus-visible {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 2px;
+}
+
 .secondaryButton {
   background: transparent;
   color: var(--text-color);
@@ -148,6 +153,39 @@
   border-color: var(--accent-color);
   transform: translateY(-2px);
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+}
+
+.secondaryButton:focus-visible {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 2px;
+}
+
+.linkedinButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #0A66C2;
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding: 0.9rem 1.5rem;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  letter-spacing: 0.3px;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.linkedinButton:hover {
+  background: #004182;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(10, 102, 194, 0.35);
+}
+
+.linkedinButton:focus-visible {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 2px;
 }
 
 .imageSection {
@@ -530,6 +568,7 @@
   }
 
   .primaryButton,
+  .linkedinButton,
   .secondaryButton {
     width: 100%;
     padding: 0.85rem;
@@ -645,6 +684,7 @@
   }
 
   .primaryButton,
+  .linkedinButton,
   .secondaryButton {
     padding: 0.8rem;
     font-size: 0.85rem;

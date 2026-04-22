@@ -78,6 +78,11 @@
   transform: translateY(-1px);
 }
 
+.showButton:focus-visible {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 2px;
+}
+
 .showButton.active {
   background: var(--accent-color);
   color: #fff;
@@ -116,6 +121,11 @@
   .username {
     display: none;
   }
+}
+
+.errorState {
+  text-align: center;
+  padding: 2rem;
 }
 
 a.no_color {

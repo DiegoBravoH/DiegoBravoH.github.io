@@ -1,4 +1,10 @@
 import styles from '../styles/ContactPage.module.css';
+import MailIcon from '../components/icons/MailIcon';
+import LinkedinIcon from '../components/icons/LinkedinIcon';
+import GithubIcon from '../components/icons/GithubIcon';
+import ScholarIcon from '../components/icons/ScholarIcon';
+import OrcidIcon from '../components/icons/OrcidIcon';
+import ResearchGateIcon from '../components/icons/ResearchGateIcon';
 
 const ContactPage = () => {
   const contactMethods = [
@@ -6,42 +12,42 @@ const ContactPage = () => {
       name: 'Email',
       value: 'diegofbravoh@gmail.com',
       href: 'mailto:diegofbravoh@gmail.com',
-      icon: '✉',
+      icon: <MailIcon width={44} height={44} />,
       description: 'Best way to reach me'
     },
     {
       name: 'LinkedIn',
       value: 'linkedin.com/in/ingdiegobravo',
       href: 'https://www.linkedin.com/in/ingdiegobravo/',
-      icon: <i className="fa-brands fa-linkedin"></i>,
+      icon: <LinkedinIcon width={44} height={44} />,
       description: 'Professional profile'
     },
     {
       name: 'GitHub',
       value: 'github.com/DiegoBravoH',
       href: 'https://github.com/DiegoBravoH',
-      icon: <i className="fa-brands fa-github"></i>,
+      icon: <GithubIcon width={44} height={44} />,
       description: 'Code & open source'
     },
     {
       name: 'Google Scholar',
       value: 'scholar.google.com',
       href: 'https://scholar.google.com/citations?user=S47_4IcAAAAJ&hl',
-      icon: <i className="fa-solid fa-graduation-cap"></i>,
+      icon: <ScholarIcon width={44} height={44} />,
       description: 'Publications & citations'
     },
     {
       name: 'ORCID',
       value: '0000-0003-1957-1615',
       href: 'https://orcid.org/0000-0003-1957-1615',
-      icon: <i className="fa-brands fa-orcid"></i>,
+      icon: <OrcidIcon width={44} height={44} />,
       description: 'Research identity'
     },
     {
       name: 'ResearchGate',
       value: 'researchgate.net',
       href: 'https://www.researchgate.net/profile/Diego-Bravo-9',
-      icon: <i className="fa-brands fa-researchgate"></i>,
+      icon: <ResearchGateIcon width={44} height={44} />,
       description: 'Papers & collaborations'
     }
   ];

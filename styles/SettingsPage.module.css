@@ -4,3 +4,10 @@
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   margin: 1rem 0;
 }
+
+@media screen and (max-width: 768px) {
+  .container button {
+    width: 100%;
+    padding: 0.6rem 1rem;
+  }
+}

@@ -1,7 +1,7 @@
 .explorer {
   background: var(--explorer-bg);
   width: 18vw;
-  color: rgb(225, 228, 232);
+  color: var(--text-color);
   font-family: 'Source Sans Pro', sans-serif;
   border-right: 1px solid var(--explorer-border);
 }

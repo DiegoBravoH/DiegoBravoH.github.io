@@ -29,6 +29,16 @@
   margin: 0 auto;
 }
 
+.iconActive {
+  color: var(--text-color);
+  opacity: 1;
+}
+
+.iconInactive {
+  color: var(--text-color);
+  opacity: 0.4;
+}
+
 @media screen and (min-width: 2000px) {
   .sidebar {
     width: 2.5vw;

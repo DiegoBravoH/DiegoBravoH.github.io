@@ -1,36 +1,60 @@
-# VScode Portfolio
+# Portfolio — Diego Bravo
 
-A Visual Studio Code themed developer portfolio website built with Next.js and deployed on Vercel.
+Personal portfolio with a Visual Studio Code aesthetic, built with Next.js and deployed on Vercel.
 
-![vscode-portfolio banner](images/preview.png)
+**Live site:** [Diegobravoh.github.io](https://diegobravoh.github.io/)
+
+![Portfolio preview](images/preview.png)
+
+## Stack
+
+- **Framework:** Next.js 12 + React 17
+- **Styles:** CSS Modules + CSS custom properties (5 themes)
+- **Backend:** Notion API (contact form)
+- **Deploy:** Vercel (primary) · GitHub Pages (secondary)
 
 ## Environment Variables
 
-For fetching your articles from dev.to, create an `.env.local` file inside the project directory. Check the `.env.local.example` file for more information.
-
-## Running Development Server
+Copy `.env.local.example` to `.env.local` and fill in your values:
 
 ```bash
-npm run dev
-# or
-yarn dev
+cp .env.local.example .env.local
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+| Variable | Description |
+|---|---|
+| `NOTION_API_TOKEN` | Notion integration token |
+| `NOTION_DATABASE_ID` | Notion database ID for contact form |
+| `GITHUB_API_KEY` | GitHub personal access token |
+| `NEXT_PUBLIC_GITHUB_USERNAME` | Your GitHub username |
 
-All VSCode related components can be found in the `components` folder. To change the content of the portfolio, check out the `pages` folder. To add or remove pages, modify `components/Sidebar.jsx` and `components/Tabsbar.jsx`.
+> `.env.local` is git-ignored and should never be committed. See `.env.local.example` for the expected format.
 
-## Next.js Resources
+## Development
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm install
+npm run dev       # localhost:3000
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Build & Deploy
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/)
+```bash
+npm run build     # next build + export → /out
+npm run deploy    # publish /out to gh-pages branch
+```
 
-## Deploy on Vercel
+Vercel deploys automatically on push to `main`.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Themes
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Five themes available via the Settings page: `ayu`, `dracula`, `github-dark`, `night-owl`, `nord`. Selection persists in `localStorage`.
+
+## Project Structure
+
+```
+pages/        # Routes + API endpoints
+components/   # VS Code UI shell (Sidebar, Tabs, Explorer, etc.)
+styles/       # CSS Modules per component + globals
+public/       # Static assets (PDF CV, images, favicon)
+```

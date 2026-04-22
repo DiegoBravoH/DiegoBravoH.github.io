@@ -22,8 +22,32 @@
   padding: 0.15rem 0.5rem;
   font-weight: 600;
   cursor: pointer;
+  transition: background 0.15s ease, transform 0.1s ease, box-shadow 0.15s ease;
+}
+
+.info button:hover {
+  background: var(--accent-color);
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+}
+
+.info button:active {
+  transform: scale(0.97);
+  box-shadow: none;
 }
 
 .info button:focus {
   outline: 1px solid var(--accent-color);
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 0 1rem;
+    margin: 1rem 0;
+  }
+
+  .info button {
+    width: 100%;
+    padding: 0.5rem 1rem;
+  }
 }

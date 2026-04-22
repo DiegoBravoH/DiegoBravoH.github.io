@@ -8,14 +8,6 @@
     "description": "Designed, implemented, and validated deep learning models for medical video analysis, improving diagnostic accuracy by 93%. Built and deployed real-time processing pipelines handling 15fps with sub-30ms latency."
   },
   {
-    "id": "pork-colombia-livestock-ai",
-    "title": "Co-Founder & ML Engineer",
-    "company": "Livestock AI Platform",
-    "location": "CO",
-    "period": "2026 - Present",
-    "description": "Building an AI platform that helps low-income farmers in Colombia monitor livestock well-being, reducing supervision costs by 65%. Spearheaded real-time deep learning inference for remote, low-connectivity environments, achieving 95% accuracy in animal health scanning."
-  },
-  {
     "id": "guaitara-endoscopy-ai-auditing",
     "title": "ML Researcher · Clinical AI",
     "company": "Universidad Nacional de Colombia",

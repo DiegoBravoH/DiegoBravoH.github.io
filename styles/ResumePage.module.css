@@ -101,3 +101,18 @@
     text-align: center;
   }
 }
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0.5rem;
+  }
+
+  .pdfContainer {
+    gap: 1rem;
+  }
+
+  .page {
+    width: 100%;
+    overflow-x: auto;
+  }
+}

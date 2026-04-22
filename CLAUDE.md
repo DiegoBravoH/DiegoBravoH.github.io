@@ -10,7 +10,7 @@ Portfolio personal de **Diego Bravo** (ML Engineer / Researcher) con estética d
 Muestra experiencia laboral, proyectos open-source, papers académicos, actividad GitHub y CV.
 
 - **Repo:** `diegobravoh/diegobravoh.github.io`
-- **Dominio:** `gkos.dev` (via CNAME)
+- **Dominio:** `diegobravoh.github.io`
 - **Rama principal:** `main`
 
 ---
@@ -95,7 +95,7 @@ BROWSER
 ├── .env.local.example           # Plantilla de variables de entorno
 ├── next.config.js
 ├── vercel.json                  # CORS headers para /api/*
-└── CNAME                        # → gkos.dev
+└── CNAME                        # → diegobravoh.github.io
 ```
 
 ---
@@ -138,7 +138,7 @@ export async function getStaticProps() {
 - Requiere `NEXT_PUBLIC_GITHUB_USERNAME` para construir las URLs.
 
 ### Temas
-- 5 temas disponibles: `ayu`, `dracula`, `github-dark`, `night-owl`, `nord`
+- 6 temas disponibles: `dracula`, `github-dark`, `ayu-dark`, `ayu-mirage`, `nord`, `night-owl`
 - Se aplican con `data-theme` en `<html>` y se persisten en `localStorage`
 - Variables CSS definidas en `styles/globals.css`
 
@@ -194,4 +194,4 @@ El build genera HTML estático en `/out`. Vercel también despliega automáticam
 - **Vercel:** deploy automático en push a `main`. Las API routes funcionan como serverless functions.
 - **GitHub Pages:** solo estático (sin API routes). Se despliega con `npm run deploy`.
 - `vercel.json` configura headers CORS para `/api/*`.
-- `CNAME` apunta el dominio `gkos.dev` a GitHub Pages.
+- `CNAME` apunta el dominio `diegobravoh.github.io` a GitHub Pages.
