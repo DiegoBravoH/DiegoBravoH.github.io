@@ -93,28 +93,33 @@
   flex: 1;
   display: flex;
   align-items: center;
+  justify-content: flex-end;
   margin-left: auto;
+  height: 100%;
 }
 
-.windowButtons * {
-  margin-left: 0.5rem;
-  height: 13px;
-  width: 13px;
-  border-radius: 50%;
-  cursor: pointer;
-}
-
-.minimize {
-  background: #f1fa8c;
-  margin-left: auto;
-}
-
-.maximize {
-  background: #50fa7b;
-}
-
+.minimize,
+.maximize,
 .close {
-  background: #ff5555;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 30px;
+  background: transparent;
+  color: var(--text-color);
+  cursor: default;
+  transition: background 0.1s ease, color 0.1s ease;
+}
+
+.minimize:hover,
+.maximize:hover {
+  background: rgba(128, 128, 128, 0.25);
+}
+
+.close:hover {
+  background: #c42b1c;
+  color: #ffffff;
 }
 
 @media screen and (max-width: 900px) {

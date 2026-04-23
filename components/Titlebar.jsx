@@ -63,9 +63,22 @@ const Titlebar = () => {
         </div>
       </div>
       <div className={styles.windowButtons} aria-hidden="true">
-        <span className={styles.minimize} tabIndex="-1"></span>
-        <span className={styles.maximize} tabIndex="-1"></span>
-        <span className={styles.close} tabIndex="-1"></span>
+        <span className={styles.minimize} tabIndex="-1">
+          <svg width="10" height="1" viewBox="0 0 10 1" fill="currentColor">
+            <rect width="10" height="1"/>
+          </svg>
+        </span>
+        <span className={styles.maximize} tabIndex="-1">
+          <svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" strokeWidth="1">
+            <rect x="0.5" y="0.5" width="9" height="9"/>
+          </svg>
+        </span>
+        <span className={styles.close} tabIndex="-1">
+          <svg width="10" height="10" viewBox="0 0 10 10" fill="currentColor">
+            <line x1="0" y1="0" x2="10" y2="10" stroke="currentColor" strokeWidth="1.2"/>
+            <line x1="10" y1="0" x2="0" y2="10" stroke="currentColor" strokeWidth="1.2"/>
+          </svg>
+        </span>
       </div>
     </section>
   );
