@@ -1,10 +1,52 @@
 import Image from 'next/image';
+import { useRouter } from 'next/router';
+import { useState, useEffect, useCallback } from 'react';
 import styles from '../styles/Titlebar.module.css';
 
-const Titlebar = () => {
+// Same order as Explorer.jsx
+const ROUTES = [
+  { path: '/',         label: 'home.jsx' },
+  { path: '/resume',   label: 'resume.html' },
+  { path: '/contact',  label: 'contact.yml' },
+  { path: '/projects', label: 'projects.py' },
+  { path: '/papers',   label: 'papers.json' },
+  { path: '/github',   label: 'github.md' },
+];
 
-  const handleBack = () => window.history.back();
-  const handleForward = () => window.history.forward();
+const Titlebar = () => {
+  const router = useRouter();
+
+  const routerIndex = ROUTES.findIndex((r) => r.path === router.pathname);
+
+  // Local state for optimistic updates — fixes race condition on rapid clicks
+  const [activeIndex, setActiveIndex] = useState(routerIndex !== -1 ? routerIndex : 0);
+
+  // Sync with router when navigating via sidebar, explorer, or direct URL
+  useEffect(() => {
+    if (routerIndex !== -1) setActiveIndex(routerIndex);
+  }, [routerIndex]);
+
+  // Prefetch neighbours so navigation feels instant
+  useEffect(() => {
+    const prev = (activeIndex - 1 + ROUTES.length) % ROUTES.length;
+    const next = (activeIndex + 1) % ROUTES.length;
+    router.prefetch(ROUTES[prev].path);
+    router.prefetch(ROUTES[next].path);
+  }, [activeIndex, router]);
+
+  const handleBack = useCallback(() => {
+    const prevIndex = (activeIndex - 1 + ROUTES.length) % ROUTES.length;
+    setActiveIndex(prevIndex);
+    router.push(ROUTES[prevIndex].path);
+  }, [activeIndex, router]);
+
+  const handleForward = useCallback(() => {
+    const nextIndex = (activeIndex + 1) % ROUTES.length;
+    setActiveIndex(nextIndex);
+    router.push(ROUTES[nextIndex].path);
+  }, [activeIndex, router]);
+
+  const currentLabel = ROUTES[activeIndex]?.label ?? 'Diego Bravo - Portfolio';
 
   return (
     <section className={styles.titlebar}>
@@ -59,7 +101,7 @@ const Titlebar = () => {
           </svg>
         </button>
         <div className={styles.addressBar}>
-          <span className={styles.addressText}>Diego Bravo - Portfolio</span>
+          <span className={styles.addressText}>{currentLabel}</span>
         </div>
       </div>
       <div className={styles.windowButtons} aria-hidden="true">

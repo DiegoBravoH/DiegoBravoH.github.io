@@ -24,9 +24,9 @@
   padding: 0.5rem 1.25rem;
   font-size: 0.85rem;
   font-weight: 500;
-  color: var(--accent-color);
+  color: #1e1e1e;
   text-decoration: none;
-  background: var(--button-bg);
+  background: var(--accent-color);
   border: 1px solid transparent;
   border-radius: 4px;
   transition: all 0.2s ease;
@@ -34,7 +34,7 @@
 }
 
 .downloadButton:hover {
-  border-color: var(--accent-color);
+  opacity: 0.85;
   transform: translateY(-1px);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
