@@ -96,6 +96,32 @@
   justify-content: flex-end;
   margin-left: auto;
   height: 100%;
+  position: relative;
+}
+
+.windowMessage {
+  position: absolute;
+  top: calc(100% + 6px);
+  right: 8px;
+  background: rgba(20, 20, 20, 0.93);
+  color: #e8e8e8;
+  font-size: 0.72rem;
+  font-family: 'Source Sans Pro', sans-serif;
+  padding: 7px 14px;
+  border-radius: 8px;
+  white-space: nowrap;
+  pointer-events: none;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  animation: msgLife 3.2s ease forwards;
+  z-index: 200;
+}
+
+@keyframes msgLife {
+  0%   { opacity: 0; transform: translateY(-4px) scale(0.96); }
+  8%   { opacity: 1; transform: translateY(0)    scale(1);    }
+  75%  { opacity: 1; transform: translateY(0)    scale(1);    }
+  100% { opacity: 0; transform: translateY(4px)  scale(0.97); }
 }
 
 .minimize,
@@ -108,7 +134,7 @@
   height: 30px;
   background: transparent;
   color: var(--text-color);
-  cursor: default;
+  cursor: pointer;
   transition: background 0.1s ease, color 0.1s ease;
 }
 

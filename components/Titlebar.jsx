@@ -1,7 +1,13 @@
 import Image from 'next/image';
 import { useRouter } from 'next/router';
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback, useRef } from 'react';
 import styles from '../styles/Titlebar.module.css';
+
+const WINDOW_MESSAGES = {
+  minimize: "I don't minimize problems, I model them.",
+  maximize: "Always chasing the global maximum, not local ones.",
+  close:    "Close? The training hasn't converged yet.",
+};
 
 // Same order as Explorer.jsx
 const ROUTES = [
@@ -47,6 +53,18 @@ const Titlebar = () => {
   }, [activeIndex, router]);
 
   const currentLabel = ROUTES[activeIndex]?.label ?? 'Diego Bravo - Portfolio';
+
+  // Window button messages
+  const [msgState, setMsgState] = useState(null); // { key, count }
+  const msgTimer = useRef(null);
+
+  const showWindowMessage = useCallback((key) => {
+    clearTimeout(msgTimer.current);
+    setMsgState((prev) => ({ key, count: (prev?.count ?? 0) + 1 }));
+    msgTimer.current = setTimeout(() => setMsgState(null), 3200);
+  }, []);
+
+  useEffect(() => () => clearTimeout(msgTimer.current), []);
 
   return (
     <section className={styles.titlebar}>
@@ -104,18 +122,44 @@ const Titlebar = () => {
           <span className={styles.addressText}>{currentLabel}</span>
         </div>
       </div>
-      <div className={styles.windowButtons} aria-hidden="true">
-        <span className={styles.minimize} tabIndex="-1">
+      <div className={styles.windowButtons}>
+        {msgState && (
+          <div key={msgState.count} className={styles.windowMessage}>
+            {WINDOW_MESSAGES[msgState.key]}
+          </div>
+        )}
+        <span
+          className={styles.minimize}
+          role="button"
+          tabIndex="0"
+          aria-label="Minimize"
+          onClick={() => showWindowMessage('minimize')}
+          onKeyDown={(e) => e.key === 'Enter' && showWindowMessage('minimize')}
+        >
           <svg width="10" height="1" viewBox="0 0 10 1" fill="currentColor">
             <rect width="10" height="1"/>
           </svg>
         </span>
-        <span className={styles.maximize} tabIndex="-1">
+        <span
+          className={styles.maximize}
+          role="button"
+          tabIndex="0"
+          aria-label="Maximize"
+          onClick={() => showWindowMessage('maximize')}
+          onKeyDown={(e) => e.key === 'Enter' && showWindowMessage('maximize')}
+        >
           <svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" strokeWidth="1">
             <rect x="0.5" y="0.5" width="9" height="9"/>
           </svg>
         </span>
-        <span className={styles.close} tabIndex="-1">
+        <span
+          className={styles.close}
+          role="button"
+          tabIndex="0"
+          aria-label="Close"
+          onClick={() => showWindowMessage('close')}
+          onKeyDown={(e) => e.key === 'Enter' && showWindowMessage('close')}
+        >
           <svg width="10" height="10" viewBox="0 0 10 10" fill="currentColor">
             <line x1="0" y1="0" x2="10" y2="10" stroke="currentColor" strokeWidth="1.2"/>
             <line x1="10" y1="0" x2="0" y2="10" stroke="currentColor" strokeWidth="1.2"/>
