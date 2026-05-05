@@ -2,6 +2,7 @@ import Image from 'next/image';
 import { useRouter } from 'next/router';
 import { useState, useEffect, useCallback, useRef } from 'react';
 import styles from '../styles/Titlebar.module.css';
+import { useTerminal } from '../context/TerminalContext';
 
 const WINDOW_MESSAGES = {
   minimize: "I don't minimize problems, I model them.",
@@ -31,6 +32,7 @@ const ROUTES = [
 
 const Titlebar = () => {
   const router = useRouter();
+  const { toggleTerminal } = useTerminal();
 
   const routerIndex = ROUTES.findIndex((r) => r.path === router.pathname);
 
@@ -145,7 +147,13 @@ const Titlebar = () => {
           onClick={() => showMenuMessage('run')}
           onKeyDown={(e) => e.key === 'Enter' && showMenuMessage('run')}
         >Run</p>
-        <p>Terminal</p>
+        <p
+          role="button"
+          tabIndex="0"
+          aria-label="Terminal"
+          onClick={toggleTerminal}
+          onKeyDown={(e) => e.key === 'Enter' && toggleTerminal()}
+        >Terminal</p>
         <p
           role="button"
           tabIndex="0"
