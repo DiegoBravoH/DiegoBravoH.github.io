@@ -16,6 +16,7 @@
   display: flex;
   margin-right: auto;
   margin-left: 0.5rem;
+  position: relative;
 }
 
 .items > * {
@@ -103,6 +104,24 @@
   position: absolute;
   top: calc(100% + 6px);
   right: 8px;
+  background: rgba(20, 20, 20, 0.93);
+  color: #e8e8e8;
+  font-size: 0.72rem;
+  font-family: 'Source Sans Pro', sans-serif;
+  padding: 7px 14px;
+  border-radius: 8px;
+  white-space: nowrap;
+  pointer-events: none;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  animation: msgLife 3.2s ease forwards;
+  z-index: 200;
+}
+
+.menuMessage {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 8px;
   background: rgba(20, 20, 20, 0.93);
   color: #e8e8e8;
   font-size: 0.72rem;

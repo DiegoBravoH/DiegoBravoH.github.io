@@ -9,6 +9,16 @@ const WINDOW_MESSAGES = {
   close:    "Close? The training hasn't converged yet.",
 };
 
+const MENU_MESSAGES = {
+  file:      "Loading checkpoint... weights not found. Start from scratch?",
+  edit:      "Careful — tweaking hyperparameters without a plan is just chaos.",
+  selection: "Feature selection: drop the noise, keep the signal.",
+  view:      "Have you tried TensorBoard? It won't fix your loss, but it looks great.",
+  go:        "Epoch 1 of ∞. Let it run.",
+  run:       "python train.py --hope --fingers-crossed --no-cuda",
+  help:      "Stack Overflow closed your question. The model still doesn't converge.",
+};
+
 // Same order as Explorer.jsx
 const ROUTES = [
   { path: '/',         label: 'home.jsx' },
@@ -66,6 +76,18 @@ const Titlebar = () => {
 
   useEffect(() => () => clearTimeout(msgTimer.current), []);
 
+  // Menu item messages
+  const [menuMsgState, setMenuMsgState] = useState(null); // { key, count }
+  const menuMsgTimer = useRef(null);
+
+  const showMenuMessage = useCallback((key) => {
+    clearTimeout(menuMsgTimer.current);
+    setMenuMsgState((prev) => ({ key, count: (prev?.count ?? 0) + 1 }));
+    menuMsgTimer.current = setTimeout(() => setMenuMsgState(null), 3200);
+  }, []);
+
+  useEffect(() => () => clearTimeout(menuMsgTimer.current), []);
+
   return (
     <section className={styles.titlebar}>
       <Image
@@ -76,14 +98,61 @@ const Titlebar = () => {
         className={styles.icon}
       />
       <div className={styles.items}>
-        <p>File</p>
-        <p>Edit</p>
-        <p>Selection</p>
-        <p>View</p>
-        <p>Go</p>
-        <p>Run</p>
+        {menuMsgState && (
+          <div key={menuMsgState.count} className={styles.menuMessage}>
+            {MENU_MESSAGES[menuMsgState.key]}
+          </div>
+        )}
+        <p
+          role="button"
+          tabIndex="0"
+          aria-label="File"
+          onClick={() => showMenuMessage('file')}
+          onKeyDown={(e) => e.key === 'Enter' && showMenuMessage('file')}
+        >File</p>
+        <p
+          role="button"
+          tabIndex="0"
+          aria-label="Edit"
+          onClick={() => showMenuMessage('edit')}
+          onKeyDown={(e) => e.key === 'Enter' && showMenuMessage('edit')}
+        >Edit</p>
+        <p
+          role="button"
+          tabIndex="0"
+          aria-label="Selection"
+          onClick={() => showMenuMessage('selection')}
+          onKeyDown={(e) => e.key === 'Enter' && showMenuMessage('selection')}
+        >Selection</p>
+        <p
+          role="button"
+          tabIndex="0"
+          aria-label="View"
+          onClick={() => showMenuMessage('view')}
+          onKeyDown={(e) => e.key === 'Enter' && showMenuMessage('view')}
+        >View</p>
+        <p
+          role="button"
+          tabIndex="0"
+          aria-label="Go"
+          onClick={() => showMenuMessage('go')}
+          onKeyDown={(e) => e.key === 'Enter' && showMenuMessage('go')}
+        >Go</p>
+        <p
+          role="button"
+          tabIndex="0"
+          aria-label="Run"
+          onClick={() => showMenuMessage('run')}
+          onKeyDown={(e) => e.key === 'Enter' && showMenuMessage('run')}
+        >Run</p>
         <p>Terminal</p>
-        <p>Help</p>
+        <p
+          role="button"
+          tabIndex="0"
+          aria-label="Help"
+          onClick={() => showMenuMessage('help')}
+          onKeyDown={(e) => e.key === 'Enter' && showMenuMessage('help')}
+        >Help</p>
       </div>
       <div className={styles.navBar}>
         <button
