@@ -4,6 +4,14 @@
   color: var(--text-color);
   font-family: 'Source Sans Pro', sans-serif;
   border-right: 1px solid var(--explorer-border);
+  overflow: hidden;
+  transition: width 0.2s ease;
+  flex-shrink: 0;
+}
+
+.explorerCollapsed {
+  width: 0 !important;
+  border-right: none !important;
 }
 
 .title {

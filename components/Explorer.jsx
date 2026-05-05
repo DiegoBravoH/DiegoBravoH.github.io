@@ -37,11 +37,11 @@ const explorerItems = [
   },
 ];
 
-const Explorer = () => {
+const Explorer = ({ isOpen = true }) => {
   const [portfolioOpen, setPortfolioOpen] = useState(true);
 
   return (
-    <div className={styles.explorer}>
+    <div className={`${styles.explorer} ${isOpen ? '' : styles.explorerCollapsed}`}>
       <p className={styles.title}>Diego Bravo</p>
       <div>
         <input

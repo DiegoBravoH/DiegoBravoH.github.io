@@ -50,24 +50,36 @@ const sidebarBottomItems = [
   },
 ];
 
-const Sidebar = () => {
+const Sidebar = ({ explorerOpen, onToggleExplorer }) => {
   const router = useRouter();
+
+  const handleTopItemClick = (e, path) => {
+    if (router.pathname === path) {
+      e.preventDefault();
+      onToggleExplorer();
+    }
+  };
 
   return (
     <aside className={styles.sidebar}>
       <div className={styles.sidebarTop}>
-        {sidebarTopItems.map(({ Icon, path, label }) => (
-          <Link href={path} key={path}>
-            <div
-              aria-label={label}
-              className={`${styles.iconContainer} ${router.pathname === path ? styles.active : ''}`}
-            >
-              <Icon
-                className={`${styles.icon} ${router.pathname === path ? styles.iconActive : styles.iconInactive}`}
-              />
-            </div>
-          </Link>
-        ))}
+        {sidebarTopItems.map(({ Icon, path, label }) => {
+          const isActive = router.pathname === path;
+          const isVisible = isActive && explorerOpen;
+          return (
+            <Link href={path} key={path}>
+              <div
+                aria-label={label}
+                className={`${styles.iconContainer} ${isVisible ? styles.active : ''}`}
+                onClick={(e) => handleTopItemClick(e, path)}
+              >
+                <Icon
+                  className={`${styles.icon} ${isActive ? styles.iconActive : styles.iconInactive}`}
+                />
+              </div>
+            </Link>
+          );
+        })}
       </div>
       <div className={styles.sidebarBottom}>
         {sidebarBottomItems.map(({ Icon, path, label }) => (
