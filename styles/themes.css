@@ -79,33 +79,6 @@
   --article-bg: #10121a;
 }
 
-/* Ayu Mirage */
-[data-theme='ayu-mirage'] {
-  --main-bg: #1f2430;
-  --bg-text: #21242b;
-  --text-color: #efefef;
-  --accent-color: #e6b450;
-  --titlebar-bg: #1f2428;
-  --sidebar-bg: #1f2430;
-  --sidebar-hover-bg: #191e2a;
-  --explorer-bg: #1f2430;
-  --explorer-hover-bg: #191e2a;
-  --explorer-border: transparent;
-  --tabs-bg: #1f2430;
-  --tab-bg: #1f2430;
-  --transparent-bg: rgba(31, 36, 48, 0.2);
-  --tab-active-bg: #1f2430;
-  --tab-border: transparent;
-  --bottombar-bg: #1f2430;
-  --bottombar-border: transparent;
-  --button-bg: #e6b450;
-  --button-text: #1f2430;
-  --bottombar-hover-bg: #4f4f52;
-  --scrollbar-track-bg: #1f2430;
-  --scrollbar-thumb-bg: #454647;
-  --article-bg: #252e3d;
-}
-
 /* Nord */
 [data-theme='nord'] {
   --main-bg: #2e3440;
@@ -133,29 +106,110 @@
   --article-bg: #363f50;
 }
 
-/* Night Owl */
-[data-theme='night-owl'] {
-  --main-bg: #011627;
-  --bg-text: #031d33;
-  --text-color: #89a4bb;
-  --accent-color: rgb(95, 126, 151);
-  --titlebar-bg: #011627;
-  --sidebar-bg: #011627;
-  --sidebar-hover-bg: #0e293f;
-  --explorer-bg: #011627;
-  --explorer-hover-bg: #0e293f;
-  --explorer-border: transparent;
-  --tabs-bg: #011627;
-  --tab-bg: #01111d;
-  --transparent-bg: rgba(1, 17, 29, 0.2);
-  --tab-active-bg: #0b2942;
-  --tab-border: rgb(39, 43, 59);
-  --bottombar-bg: #011627;
-  --bottombar-border: #262a39;
-  --button-bg: rgb(95, 126, 151);
-  --button-text: #fff;
-  --bottombar-hover-bg: #1b222f;
-  --scrollbar-track-bg: #011627;
-  --scrollbar-thumb-bg: #043254;
-  --article-bg: #031d33;
+/* Catppuccin Mocha */
+[data-theme='catppuccin-mocha'] {
+  --main-bg: #1e1e2e;
+  --bg-text: #181825;
+  --text-color: #cdd6f4;
+  --accent-color: #cba6f7;
+  --titlebar-bg: #11111b;
+  --sidebar-bg: #181825;
+  --sidebar-hover-bg: #313244;
+  --explorer-bg: #181825;
+  --explorer-hover-bg: #313244;
+  --explorer-border: #313244;
+  --tabs-bg: #11111b;
+  --tab-bg: #181825;
+  --transparent-bg: rgba(24, 24, 37, 0.2);
+  --tab-active-bg: #1e1e2e;
+  --tab-border: #313244;
+  --bottombar-bg: #11111b;
+  --bottombar-border: #313244;
+  --button-bg: #cba6f7;
+  --button-text: #1e1e2e;
+  --bottombar-hover-bg: #313244;
+  --scrollbar-track-bg: #1e1e2e;
+  --scrollbar-thumb-bg: #585b70;
+  --article-bg: #181825;
+}
+
+/* Tokyo Night */
+[data-theme='tokyo-night'] {
+  --main-bg: #1a1b26;
+  --bg-text: #16161e;
+  --text-color: #a9b1d6;
+  --accent-color: #7aa2f7;
+  --titlebar-bg: #16161e;
+  --sidebar-bg: #16161e;
+  --sidebar-hover-bg: #1f2335;
+  --explorer-bg: #16161e;
+  --explorer-hover-bg: #1f2335;
+  --explorer-border: #1f2335;
+  --tabs-bg: #16161e;
+  --tab-bg: #16161e;
+  --transparent-bg: rgba(22, 22, 30, 0.2);
+  --tab-active-bg: #1a1b26;
+  --tab-border: #1f2335;
+  --bottombar-bg: #16161e;
+  --bottombar-border: #1f2335;
+  --button-bg: #7aa2f7;
+  --button-text: #16161e;
+  --bottombar-hover-bg: #1f2335;
+  --scrollbar-track-bg: #1a1b26;
+  --scrollbar-thumb-bg: #292e42;
+  --article-bg: #16161e;
+}
+
+/* One Dark Pro */
+[data-theme='one-dark-pro'] {
+  --main-bg: #282c34;
+  --bg-text: #21252b;
+  --text-color: #abb2bf;
+  --accent-color: #61afef;
+  --titlebar-bg: #21252b;
+  --sidebar-bg: #21252b;
+  --sidebar-hover-bg: #2c313a;
+  --explorer-bg: #21252b;
+  --explorer-hover-bg: #2c313a;
+  --explorer-border: #181a1f;
+  --tabs-bg: #21252b;
+  --tab-bg: #21252b;
+  --transparent-bg: rgba(33, 37, 43, 0.2);
+  --tab-active-bg: #282c34;
+  --tab-border: #181a1f;
+  --bottombar-bg: #21252b;
+  --bottombar-border: #181a1f;
+  --button-bg: #61afef;
+  --button-text: #21252b;
+  --bottombar-hover-bg: #2c313a;
+  --scrollbar-track-bg: #282c34;
+  --scrollbar-thumb-bg: #4b5263;
+  --article-bg: #21252b;
+}
+
+/* Rosé Pine */
+[data-theme='rose-pine'] {
+  --main-bg: #191724;
+  --bg-text: #1f1d2e;
+  --text-color: #e0def4;
+  --accent-color: #ebbcba;
+  --titlebar-bg: #191724;
+  --sidebar-bg: #1f1d2e;
+  --sidebar-hover-bg: #26233a;
+  --explorer-bg: #1f1d2e;
+  --explorer-hover-bg: #26233a;
+  --explorer-border: #26233a;
+  --tabs-bg: #191724;
+  --tab-bg: #1f1d2e;
+  --transparent-bg: rgba(31, 29, 46, 0.2);
+  --tab-active-bg: #191724;
+  --tab-border: #26233a;
+  --bottombar-bg: #191724;
+  --bottombar-border: #26233a;
+  --button-bg: #ebbcba;
+  --button-text: #191724;
+  --bottombar-hover-bg: #26233a;
+  --scrollbar-track-bg: #191724;
+  --scrollbar-thumb-bg: #403d52;
+  --article-bg: #1f1d2e;
 }
