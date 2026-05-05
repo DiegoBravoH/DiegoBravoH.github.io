@@ -4,8 +4,8 @@
   left: 0;
   right: 0;
   height: 240px;
-  background: #1e1e1e;
-  border-top: 1px solid #3c3c3c;
+  background: var(--terminal-bg);
+  border-top: 1px solid var(--terminal-border);
   display: flex;
   flex-direction: column;
   z-index: 99;
@@ -21,10 +21,10 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: #252526;
+  background: var(--terminal-header-bg);
   height: 35px;
   padding: 0 8px;
-  border-bottom: 1px solid #3c3c3c;
+  border-bottom: 1px solid var(--terminal-border);
   flex-shrink: 0;
 }
 
@@ -37,8 +37,8 @@
 .tabActive {
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 0.75rem;
-  color: #cccccc;
-  border-bottom: 1px solid #007acc;
+  color: var(--terminal-text);
+  border-bottom: 1px solid var(--terminal-tab-underline);
   padding-bottom: 1px;
   letter-spacing: 0.05em;
 }
@@ -46,8 +46,8 @@
 .shell {
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 0.72rem;
-  color: #9d9d9d;
-  background: #3a3d41;
+  color: var(--terminal-muted);
+  background: var(--terminal-shell-bg);
   padding: 2px 8px;
   border-radius: 3px;
 }
@@ -60,7 +60,7 @@
 .closeBtn {
   background: transparent;
   border: none;
-  color: #9d9d9d;
+  color: var(--terminal-muted);
   font-size: 1.1rem;
   cursor: pointer;
   padding: 2px 6px;
@@ -71,7 +71,7 @@
 
 .closeBtn:hover {
   background: rgba(255, 255, 255, 0.1);
-  color: #cccccc;
+  color: var(--terminal-text);
 }
 
 .body {
@@ -80,9 +80,9 @@
   padding: 8px 12px;
   font-family: 'JetBrains Mono', 'Courier New', monospace;
   font-size: 0.78rem;
-  color: #cccccc;
+  color: var(--terminal-text);
   scrollbar-width: thin;
-  scrollbar-color: #424242 #1e1e1e;
+  scrollbar-color: var(--terminal-scrollbar-thumb) var(--terminal-scrollbar-track);
 }
 
 .body::-webkit-scrollbar {
@@ -90,11 +90,11 @@
 }
 
 .body::-webkit-scrollbar-track {
-  background: #1e1e1e;
+  background: var(--terminal-scrollbar-track);
 }
 
 .body::-webkit-scrollbar-thumb {
-  background: #424242;
+  background: var(--terminal-scrollbar-thumb);
   border-radius: 4px;
 }
 
@@ -103,11 +103,104 @@
   white-space: pre;
 }
 
+/* ── History entries (command + output pairs) ── */
+.historyEntry {
+  margin-bottom: 2px;
+}
+
+.historyCmd {
+  line-height: 1.6;
+  white-space: pre-wrap;
+}
+
+.historyOutput {
+  line-height: 1.6;
+  white-space: pre-wrap;
+  color: var(--terminal-text);
+  opacity: 0.85;
+}
+
+.historyOutput.error {
+  color: var(--terminal-error);
+  opacity: 1;
+}
+
+/* ── Prompt colours ── */
+.promptUser {
+  color: var(--terminal-prompt);
+}
+
+.promptAt {
+  color: var(--terminal-muted);
+}
+
+.promptPath {
+  color: var(--terminal-cmd);
+}
+
+.promptSuffix {
+  color: var(--terminal-text);
+}
+
+/* ── Interactive input row ── */
+.inputRow {
+  display: flex;
+  align-items: center;
+  line-height: 1.6;
+  padding-bottom: 4px;
+}
+
+.inputField {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: var(--terminal-text);
+  font-family: 'JetBrains Mono', 'Courier New', monospace;
+  font-size: 0.78rem;
+  caret-color: var(--terminal-prompt);
+  padding: 0;
+  margin: 0;
+}
+
+.inputField::selection {
+  background: var(--terminal-tab-underline);
+  color: var(--terminal-bg);
+}
+
+/* Blinking cursor when the field has no native caret (decoration element) */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.cursor {
+  display: inline-block;
+  width: 0.55em;
+  height: 1em;
+  background: var(--terminal-prompt);
+  animation: blink 1s step-start infinite;
+  vertical-align: text-bottom;
+  margin-left: 1px;
+  flex-shrink: 0;
+}
+
+/* Hide cursor decoration while the real input is focused
+   (browser caret is visible instead) */
+.inputField:focus ~ .cursor {
+  display: none;
+}
+
 @media screen and (max-width: 768px) {
   .panel {
     height: 200px;
   }
+
   .body {
+    font-size: 0.72rem;
+  }
+
+  .inputField {
     font-size: 0.72rem;
   }
 }

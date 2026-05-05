@@ -23,6 +23,19 @@
   --scrollbar-track-bg: #282a36;
   --scrollbar-thumb-bg: #454647;
   --article-bg: #21222c;
+  /* Terminal */
+  --terminal-bg: #1e1f29;
+  --terminal-header-bg: #252631;
+  --terminal-border: #3c3d51;
+  --terminal-text: #f8f8f2;
+  --terminal-muted: #9d9da8;
+  --terminal-tab-underline: #bd93f9;
+  --terminal-shell-bg: #44475a;
+  --terminal-scrollbar-track: #1e1f29;
+  --terminal-scrollbar-thumb: #454647;
+  --terminal-prompt: #50fa7b;
+  --terminal-cmd: #f1fa8c;
+  --terminal-error: #ff5555;
 }
 
 /* GitHub Dark */
@@ -50,6 +63,19 @@
   --scrollbar-track-bg: #24292e;
   --scrollbar-thumb-bg: #333536;
   --article-bg: #1f2428;
+  /* Terminal */
+  --terminal-bg: #161b22;
+  --terminal-header-bg: #1f2428;
+  --terminal-border: #30363d;
+  --terminal-text: #e6edf3;
+  --terminal-muted: #8b949e;
+  --terminal-tab-underline: #f9826c;
+  --terminal-shell-bg: #21262d;
+  --terminal-scrollbar-track: #161b22;
+  --terminal-scrollbar-thumb: #30363d;
+  --terminal-prompt: #56d364;
+  --terminal-cmd: #e3b341;
+  --terminal-error: #f85149;
 }
 
 /* Ayu Dark */
@@ -77,6 +103,19 @@
   --scrollbar-track-bg: #0a0e14;
   --scrollbar-thumb-bg: #454647;
   --article-bg: #10121a;
+  /* Terminal */
+  --terminal-bg: #01060e;
+  --terminal-header-bg: #0d1117;
+  --terminal-border: #1a2030;
+  --terminal-text: #cccac2;
+  --terminal-muted: #5c6773;
+  --terminal-tab-underline: #e6b450;
+  --terminal-shell-bg: #0f1720;
+  --terminal-scrollbar-track: #01060e;
+  --terminal-scrollbar-thumb: #1a2030;
+  --terminal-prompt: #aad94c;
+  --terminal-cmd: #e6b450;
+  --terminal-error: #f28779;
 }
 
 /* Nord */
@@ -104,6 +143,19 @@
   --scrollbar-track-bg: #2e3440;
   --scrollbar-thumb-bg: #454647;
   --article-bg: #363f50;
+  /* Terminal */
+  --terminal-bg: #242933;
+  --terminal-header-bg: #2e3440;
+  --terminal-border: #434c5e;
+  --terminal-text: #d8dee9;
+  --terminal-muted: #616e88;
+  --terminal-tab-underline: #88c0d0;
+  --terminal-shell-bg: #3b4252;
+  --terminal-scrollbar-track: #242933;
+  --terminal-scrollbar-thumb: #434c5e;
+  --terminal-prompt: #a3be8c;
+  --terminal-cmd: #ebcb8b;
+  --terminal-error: #bf616a;
 }
 
 /* Catppuccin Mocha */
@@ -131,6 +183,19 @@
   --scrollbar-track-bg: #1e1e2e;
   --scrollbar-thumb-bg: #585b70;
   --article-bg: #181825;
+  /* Terminal */
+  --terminal-bg: #11111b;
+  --terminal-header-bg: #181825;
+  --terminal-border: #313244;
+  --terminal-text: #cdd6f4;
+  --terminal-muted: #6c7086;
+  --terminal-tab-underline: #cba6f7;
+  --terminal-shell-bg: #313244;
+  --terminal-scrollbar-track: #11111b;
+  --terminal-scrollbar-thumb: #45475a;
+  --terminal-prompt: #a6e3a1;
+  --terminal-cmd: #f9e2af;
+  --terminal-error: #f38ba8;
 }
 
 /* Tokyo Night */
@@ -158,6 +223,19 @@
   --scrollbar-track-bg: #1a1b26;
   --scrollbar-thumb-bg: #292e42;
   --article-bg: #16161e;
+  /* Terminal */
+  --terminal-bg: #13131d;
+  --terminal-header-bg: #16161e;
+  --terminal-border: #1f2335;
+  --terminal-text: #a9b1d6;
+  --terminal-muted: #565f89;
+  --terminal-tab-underline: #7aa2f7;
+  --terminal-shell-bg: #1f2335;
+  --terminal-scrollbar-track: #13131d;
+  --terminal-scrollbar-thumb: #292e42;
+  --terminal-prompt: #9ece6a;
+  --terminal-cmd: #e0af68;
+  --terminal-error: #f7768e;
 }
 
 /* One Dark Pro */
@@ -185,6 +263,19 @@
   --scrollbar-track-bg: #282c34;
   --scrollbar-thumb-bg: #4b5263;
   --article-bg: #21252b;
+  /* Terminal */
+  --terminal-bg: #1e2127;
+  --terminal-header-bg: #21252b;
+  --terminal-border: #181a1f;
+  --terminal-text: #abb2bf;
+  --terminal-muted: #5c6370;
+  --terminal-tab-underline: #61afef;
+  --terminal-shell-bg: #2c313a;
+  --terminal-scrollbar-track: #1e2127;
+  --terminal-scrollbar-thumb: #4b5263;
+  --terminal-prompt: #98c379;
+  --terminal-cmd: #e5c07b;
+  --terminal-error: #e06c75;
 }
 
 /* Rosé Pine */
@@ -212,4 +303,17 @@
   --scrollbar-track-bg: #191724;
   --scrollbar-thumb-bg: #403d52;
   --article-bg: #1f1d2e;
+  /* Terminal */
+  --terminal-bg: #120f1d;
+  --terminal-header-bg: #1f1d2e;
+  --terminal-border: #26233a;
+  --terminal-text: #e0def4;
+  --terminal-muted: #6e6a86;
+  --terminal-tab-underline: #ebbcba;
+  --terminal-shell-bg: #26233a;
+  --terminal-scrollbar-track: #120f1d;
+  --terminal-scrollbar-thumb: #403d52;
+  --terminal-prompt: #9ccfd8;
+  --terminal-cmd: #f6c177;
+  --terminal-error: #eb6f92;
 }
