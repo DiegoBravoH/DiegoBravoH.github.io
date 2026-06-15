@@ -167,6 +167,45 @@
   color: #ffffff;
 }
 
+/* AI tool icons — shown before window control buttons */
+.aiIcons {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  padding: 0 4px;
+}
+
+.aiIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 22px;
+  border-radius: 4px;
+  text-decoration: none;
+  color: #F5F5F5;
+  opacity: 0.55;
+  transition: opacity 0.15s ease, background 0.15s ease;
+}
+
+.aiIcon:hover {
+  opacity: 1;
+  background: var(--sidebar-hover-bg);
+}
+
+.aiIconClaude {
+  color: #DA7756;
+}
+
+.aiSeparator {
+  width: 1px;
+  height: 16px;
+  background: var(--text-color);
+  opacity: 0.15;
+  margin: 0 4px;
+  flex-shrink: 0;
+}
+
 @media screen and (max-width: 900px) {
   .items p {
     display: none;
@@ -193,5 +232,11 @@
   }
   .addressText {
     font-size: 0.65rem;
+  }
+  .aiIcons {
+    display: none;
+  }
+  .aiSeparator {
+    display: none;
   }
 }

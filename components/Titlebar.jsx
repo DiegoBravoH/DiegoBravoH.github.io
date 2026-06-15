@@ -3,6 +3,9 @@ import { useRouter } from 'next/router';
 import { useState, useEffect, useCallback, useRef } from 'react';
 import styles from '../styles/Titlebar.module.css';
 import { useTerminal } from '../context/TerminalContext';
+import ClaudeIcon from './icons/ClaudeIcon';
+import ChatGPTIcon from './icons/ChatGPTIcon';
+import CopilotIcon from './icons/CopilotIcon';
 
 const WINDOW_MESSAGES = {
   minimize: "I don't minimize problems, I model them.",
@@ -205,6 +208,39 @@ const Titlebar = () => {
             {WINDOW_MESSAGES[msgState.key]}
           </div>
         )}
+        <div className={styles.aiIcons}>
+          <a
+            href="https://claude.ai"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.aiIcon}
+            title="Claude — Anthropic"
+            aria-label="Claude by Anthropic"
+          >
+            <ClaudeIcon className={styles.aiIconClaude} />
+          </a>
+          <a
+            href="https://chatgpt.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.aiIcon}
+            title="ChatGPT — OpenAI"
+            aria-label="ChatGPT by OpenAI"
+          >
+            <ChatGPTIcon className={styles.aiIconChatGPT} />
+          </a>
+          <a
+            href="https://github.com/features/copilot"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.aiIcon}
+            title="GitHub Copilot"
+            aria-label="GitHub Copilot"
+          >
+            <CopilotIcon className={styles.aiIconCopilot} />
+          </a>
+        </div>
+        <div className={styles.aiSeparator} aria-hidden="true" />
         <span
           className={styles.minimize}
           role="button"
