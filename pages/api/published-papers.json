@@ -2,7 +2,7 @@
   {
     "id": 1,
     "title": "GastroHUN an Endoscopy Dataset of Complete Systematic Screening Protocol for the Stomach",
-    "citations": 12,
+    "citations": 23,
     "year": 2025,
     "conference": "Scientific Data, 2025 - nature.com",
     "abstract": "Endoscopy is vital for detecting and diagnosing gastrointestinal diseases. Systematic examination protocols are key to enhancing detection, particularly for the early identification of premalignant conditions. Publicly available endoscopy image databases are crucial for machine learning research, yet challenges persist, particularly in identifying upper gastrointestinal anatomical landmarks to ensure effective and precise endoscopic procedures. However, many existing datasets have inconsistent labeling and limited accessibility, leading to biased models and reduced generalizability. This paper introduces GastroHUN, an open dataset documenting stomach screening procedures based on a systematic protocol. GastroHUN includes 8,834 images from 387 patients and 4,729 labeled video sequences, all annotated by four experts. The dataset covers 22 anatomical landmarks in the stomach and includes an additional category for unqualified images, making it a valuable resource for AI model development. By providing a robust public dataset and baseline deep learning models for image and sequence classification, GastroHUN serves as a benchmark for future research and aids in the development of more effective algorithms.",
