@@ -61,11 +61,9 @@ Desktop.ini
 .history/
 
 # ============================================================
-# Claude Code — local-only files
-# .claude/agents/ and .claude/agent-memory/ are tracked.
-# settings.local.json is machine-specific — do not commit.
+# Claude Code — keep entirely out of the repo
 # ============================================================
-.claude/settings.local.json
+.claude/
 
 # ============================================================
 # Misc build / temp artifacts specific to this project
